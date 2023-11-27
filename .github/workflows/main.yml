@@ -17,4 +17,4 @@ jobs:
         server-dir: /public_html/
         port: 21
         security: loose
-        protocol: ftp
+        protocol: ftps
