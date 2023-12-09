@@ -4,7 +4,7 @@ if (isset($_GET['cid'])) {
     $cid = $_GET['cid'];
 
     // Retrieve file information from the database, including the original file name
-    $db = new mysqli('localhost', 'onenetly_home', 'AmiMotiur27@', 'onenetly_home');
+    $db = new mysqli('104.251.111.203', 'then70970925_home', 'AmiMotiur27@', 'then70970925_home');
     $stmt = $db->prepare("SELECT file_name FROM files WHERE cid = ?");
     $stmt->bind_param('s', $cid);
     $stmt->execute();
