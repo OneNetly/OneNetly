@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Save file information to your database, including CID
                 $cid = $response['value']['cid'];
 
-                $db = new mysqli('localhost', 'onenetly_home', 'AmiMotiur27@', 'onenetly_home');
+                $db = new mysqli('104.251.111.203', 'then70970925_home', 'AmiMotiur27@', 'then70970925_home');
                 $stmt = $db->prepare("INSERT INTO files (file_name, cid) VALUES (?, ?)");
                 $stmt->bind_param('ss', $file['name'], $cid);
                 $stmt->execute();
