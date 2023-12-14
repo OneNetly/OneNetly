@@ -12,4 +12,4 @@
         <div class="text-white text-2xl font-bold"><a href="/">OneNetly</a></div>
 
     </div>
-</nav> bb
+</nav>
