@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+<?php include_once "header.php";?>
     <?php // include_once "ip.php";?>
 </body>
 </html>
