@@ -53,38 +53,11 @@ function isSuspiciousIp($ip) {
 $userIp = $_SERVER['REMOTE_ADDR'];
 
 if (isSuspiciousIp($userIp)) {
-    echo '<script type="text/javascript">
-    atOptions = {
-        "key" : "65bf3834eba8a35454db6a6a9a73e9d5",
-        "format" : "iframe",
-        "height" : 90,
-        "width" : 728,
-        "params" : {}
-    };
-    document.write(\'<script type="text/javascript" src="//www.topcreativeformat.com/65bf3834eba8a35454db6a6a9a73e9d5/invoke.js"></script>\');
-    </script>';
+    echo '';
 } elseif (isProxyOrVpn($userIp)) {
-    echo '<script type="text/javascript">
-    atOptions = {
-        "key" : "65bf3834eba8a35454db6a6a9a73e9d5",
-        "format" : "iframe",
-        "height" : 90,
-        "width" : 728,
-        "params" : {}
-    };
-    document.write(\'<script type="text/javascript" src="//www.topcreativeformat.com/65bf3834eba8a35454db6a6a9a73e9d5/invoke.js"></script>\');
-    </script>';
+    echo '';
 } elseif (isHostingIp($userIp)) {
-    echo '<script type="text/javascript">
-    atOptions = {
-        "key" : "65bf3834eba8a35454db6a6a9a73e9d5",
-        "format" : "iframe",
-        "height" : 90,
-        "width" : 728,
-        "params" : {}
-    };
-    document.write(\'<script type="text/javascript" src="//www.topcreativeformat.com/65bf3834eba8a35454db6a6a9a73e9d5/invoke.js"></script>\');
-    </script>';
+    echo '';
 } else {
     echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
     crossorigin="anonymous"></script>
