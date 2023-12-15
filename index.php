@@ -93,43 +93,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }, 2000);
     }
 </script>
-<script>
-    document.getElementById('uploadForm').addEventListener('submit', function () {
-        // Display the progress bar
-        document.getElementById('progressWrapper').style.display = 'block';
-
-        // Get the file input and create a FormData object
-        var fileInput = document.getElementById('file');
-        var formData = new FormData(this);
-
-        // Make an AJAX request for file upload with progress
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', 'index.php', true);
-
-        // Upload progress event listener
-        xhr.upload.addEventListener('progress', function (event) {
-            if (event.lengthComputable) {
-                // Calculate percentage and update the progress bar
-                var percentComplete = (event.loaded / event.total) * 100;
-                document.getElementById('progressBar').style.width = percentComplete + '%';
-                document.getElementById('progressStatus').innerText = percentComplete.toFixed(2) + '%';
-            }
-        });
-
-        // Upload complete event listener
-        xhr.addEventListener('load', function () {
-            // Handle the response after the upload is complete
-            // (You may need to update this part based on your existing logic)
-            var response = JSON.parse(xhr.responseText);
-            console.log(response);
-        });
-
-        // Send the FormData with the file
-        xhr.send(formData);
-
-        // Prevent the form from submitting in the traditional way
-        event.preventDefault();
-    });
-</script>
 
 <?php include('footer.php'); ?>
