@@ -64,9 +64,18 @@
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script>
         function copyToClipboard() {
-            // ... (your existing copyToClipboard function)
+            var copyText = document.getElementById("copyInput");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+
+            var copyButton = document.getElementById("copyButton");
+            copyButton.innerText = "Copied!";
+            copyButton.style.backgroundColor = "green";
+            copyButton.style.cursor = "default";
 
             // Reset the button text after a short delay
             setTimeout(function () {
