@@ -8,11 +8,6 @@
                 <label for="file" class="mb-2">Choose a file to upload:</label>
                 <input type="file" name="file" id="file" class="border p-2 rounded-md" />
             </div>
-            <!-- Progress bar -->
-    <div id="progressWrapper" style="display: none;">
-        <div id="progressBar" class="bg-blue-500" style="width: 0%; height: 20px;"></div>
-        <div id="progressStatus" class="text-center mt-2"></div>
-    </div>
 
             <button type="submit" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition duration-300">Upload</button>
         </form>
