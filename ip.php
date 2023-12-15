@@ -53,13 +53,51 @@ function isSuspiciousIp($ip) {
 $userIp = $_SERVER['REMOTE_ADDR'];
 
 if (isSuspiciousIp($userIp)) {
-    echo 'Suspicious IP detected. Access denied.';
+    echo '<script type="text/javascript">
+    atOptions = {
+        "key" : "65bf3834eba8a35454db6a6a9a73e9d5",
+        "format" : "iframe",
+        "height" : 90,
+        "width" : 728,
+        "params" : {}
+    };
+    document.write(\'<script type="text/javascript" src="//www.topcreativeformat.com/65bf3834eba8a35454db6a6a9a73e9d5/invoke.js"></script>\');
+    </script>';
 } elseif (isProxyOrVpn($userIp)) {
-    echo 'Proxy, VPN, or Tor exit detected. Please disable it.';
+    echo '<script type="text/javascript">
+    atOptions = {
+        "key" : "65bf3834eba8a35454db6a6a9a73e9d5",
+        "format" : "iframe",
+        "height" : 90,
+        "width" : 728,
+        "params" : {}
+    };
+    document.write(\'<script type="text/javascript" src="//www.topcreativeformat.com/65bf3834eba8a35454db6a6a9a73e9d5/invoke.js"></script>\');
+    </script>';
 } elseif (isHostingIp($userIp)) {
-    echo 'Hosting provider IP detected. Please use a personal IP.';
+    echo '<script type="text/javascript">
+    atOptions = {
+        "key" : "65bf3834eba8a35454db6a6a9a73e9d5",
+        "format" : "iframe",
+        "height" : 90,
+        "width" : 728,
+        "params" : {}
+    };
+    document.write(\'<script type="text/javascript" src="//www.topcreativeformat.com/65bf3834eba8a35454db6a6a9a73e9d5/invoke.js"></script>\');
+    </script>';
 } else {
-    echo 'No proxy, VPN, Tor exit, or hosting provider IP detected. You can proceed.';
+    echo '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
+    crossorigin="anonymous"></script>
+    <!-- Square -->
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-9354746037074515"
+        data-ad-slot="1383400984"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>';
     // Continue with your regular logic.
 }
 
