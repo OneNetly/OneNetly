@@ -1,10 +1,21 @@
 <?php
 
-// Replace 'YOUR_API_KEY' with your actual ProxyCheck.io API key
-$apiKey = '160336-8915o3-794i5c-2y8800';
+// Replace with your actual list of ProxyCheck.io API keys
+$apiKeys = ['160336-8915o3-794i5c-2y8800', '8nd720-8w8x76-843872-y21h69', '813532-804m05-008w3s-1k76q6'];
+$apiKeyIndex = 0;
+
+function getNextApiKey() {
+    global $apiKeys, $apiKeyIndex;
+    
+    $apiKey = $apiKeys[$apiKeyIndex];
+    $apiKeyIndex = ($apiKeyIndex + 1) % count($apiKeys); // Rotate to the next API key
+
+    return $apiKey;
+}
 
 function isProxyOrVpn($ip) {
-    global $apiKey;
+    // Get the next available API key
+    $apiKey = getNextApiKey();
 
     // Make a request to ProxyCheck.io API
     $url = "http://proxycheck.io/v2/$ip?key=$apiKey&vpn=1";
