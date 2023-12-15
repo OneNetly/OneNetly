@@ -8,15 +8,17 @@ if (!isset($_SESSION["user_email"])) {
 }
 
 // Include the database connection file
-include_once("database.php");
+require_once("config.php");
 
-// Retrieve user information from the database
+// Retrieve user information from the session
 $userEmail = $_SESSION["user_email"];
-$sql = "SELECT * FROM users WHERE email = '$userEmail'";
-$result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
+// Retrieve additional user details from the database
+$getUserQuery = "SELECT * FROM users WHERE email = '$userEmail'";
+$getUserResult = $conn->query($getUserQuery);
+
+if ($getUserResult->num_rows > 0) {
+    $row = $getUserResult->fetch_assoc();
     $firstName = $row["first_name"];
     $lastName = $row["last_name"];
 } else {
