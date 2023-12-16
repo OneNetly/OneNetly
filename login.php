@@ -34,29 +34,42 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<?php include_once 'header.php';?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Login</title>
-</head>
 <body>
-    <h2>User Login</h2>
-    <?php if (isset($error_message)) { ?>
-        <p style="color: red;"><?php echo $error_message; ?></p>
-    <?php } ?>
-    <form method="post" action="">
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br>
+<div class="flex items-center justify-center h-screen">
+    <div class="bg-white mt-8 p-8 rounded shadow-md w-96">
+        <h2 class="text-3xl font-extrabold mb-6 text-gray-800">User Login</h2>
 
-        <input type="checkbox" name="remember_me"> Remember Me<br>
+        <?php if (isset($error_message)) { ?>
+            <p class="text-red-500 mb-4"><?php echo $error_message; ?></p>
+        <?php } ?>
 
-        <input type="submit" value="Login">
-    </form>
-</body>
-</html>
+        <form method="post" action="" class="space-y-4">
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-600">Email:</label>
+                <input type="email" name="email" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+            </div>
+
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-600">Password:</label>
+                <input type="password" name="password" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+            </div>
+
+            <div class="flex items-center">
+                <input type="checkbox" name="remember_me" id="remember_me" class="mr-2">
+                <label for="remember_me" class="text-sm text-gray-600">Remember Me</label>
+            </div>
+
+            <button type="submit" class="w-full bg-indigo-500 text-white py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:border-indigo-300">Login</button>
+        </form>
+
+        <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">Don't have an account? <a href="#" class="text-indigo-500 hover:text-indigo-600">Register</a></p>
+        </div>
+    </div>
+</div>
+
+
+<?php include_once 'footer.php';?>
