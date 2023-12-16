@@ -31,36 +31,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 ?>
+<?php include_once 'header.php';?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Registration</title>
-</head>
-<body>
-    <h2>User Registration</h2>
-    <?php if (isset($error_message)) { ?>
-        <p style="color: red;"><?php echo $error_message; ?></p>
-    <?php } ?>
-    <form method="post" action="">
-        <label for="first_name">First Name:</label>
-        <input type="text" name="first_name" required><br>
+<div class="flex items-center justify-center h-screen">
+    <div class="bg-white mt-11 p-8 rounded shadow-md w-96">
+        <h2 class="text-3xl font-extrabold mb-6 text-gray-800">User Registration</h2>
 
-        <label for="last_name">Last Name:</label>
-        <input type="text" name="last_name" required><br>
+        <?php if (isset($error_message)) { ?>
+            <p class="text-red-500 mb-4"><?php echo $error_message; ?></p>
+        <?php } ?>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br>
+        <form method="post" action="" class="space-y-4">
+            <div>
+                <label for="first_name" class="block text-sm font-medium text-gray-600">First Name:</label>
+                <input type="text" name="first_name" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+            </div>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" required><br>
+            <div>
+                <label for="last_name" class="block text-sm font-medium text-gray-600">Last Name:</label>
+                <input type="text" name="last_name" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+            </div>
 
-        <label for="confirm_password">Confirm Password:</label>
-        <input type="password" name="confirm_password" required><br>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-600">Email:</label>
+                <input type="email" name="email" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+            </div>
 
-        <input type="submit" value="Register">
-    </form>
-</body>
-</html>
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-600">Password:</label>
+                <input type="password" name="password" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+            </div>
+
+            <div>
+                <label for="confirm_password" class="block text-sm font-medium text-gray-600">Confirm Password:</label>
+                <input type="password" name="confirm_password" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500">
+            </div>
+
+            <button type="submit" class="w-full bg-indigo-500 text-white py-2 rounded-md hover:bg-indigo-600 focus:outline-none focus:ring focus:border-indigo-300">Register</button>
+        </form>
+    </div>
+</div>
+
+
+    <?php include_once 'footer.php';?>
