@@ -4,77 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OneNetly</title>
-    <link rel="stylesheet" href="./css/output.css">
-    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </head>
 <body>
-<!-- Header -->
-<header x-data="{ open: false, showLogin: false }" class="bg-white shadow-md">
-        <div class="container mx-auto flex justify-between items-center p-4">
-
-            <!-- Logo -->
-            <div class="text-2xl font-semibold">
-                <a href="#">Your Logo</a>
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%]  mx-auto">
+            <div>
+                <img class="w-16 cursor-pointer" src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png" alt="...">
             </div>
-
-            <!-- Navigation Menu -->
-            <nav class="hidden md:flex space-x-4">
-                <a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
-                <a href="#" class="text-gray-800 hover:text-gray-600">About</a>
-                <a href="#" class="text-gray-800 hover:text-gray-600">Services</a>
-                <a href="#" class="text-gray-800 hover:text-gray-600">Contact</a>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button @click="open = !open" class="text-gray-800 hover:text-gray-600 focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
+            <div
+                class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto  w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Products</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Solution</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Resource</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Developers</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-gray-500" href="#">Pricing</a>
+                    </li>
+                </ul>
             </div>
-
-            <!-- Mobile Menu -->
-            <div x-show="open" @click.away="open = false"
-                class="md:hidden fixed top-0 left-0 w-full h-full bg-white bg-opacity-95 z-50">
-                <div class="flex justify-end p-4">
-                    <button @click="open = false" class="text-gray-800 hover:text-gray-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                    </button>
-                </div>
-                <div class="flex flex-col items-center space-y-4">
-                    <a href="#" class="text-gray-800 hover:text-gray-600">Home</a>
-                    <a href="#" class="text-gray-800 hover:text-gray-600">About</a>
-                    <a href="#" class="text-gray-800 hover:text-gray-600">Services</a>
-                    <a href="#" class="text-gray-800 hover:text-gray-600">Contact</a>
-
-                    <!-- Mobile Login and Register Section -->
-                    <div x-show="showLogin" class="flex flex-col items-center space-y-4 mt-4">
-                        <a href="#" class="text-gray-800 hover:text-gray-600">Login</a>
-                        <a href="#" class="text-gray-800 hover:text-gray-600">Register</a>
-                    </div>
-                </div>
-
-                <!-- Mobile Login and Register Buttons -->
-                <div class="flex items-center space-x-4 mt-4">
-                    <button @click="showLogin = !showLogin"
-                        class="text-gray-800 hover:text-gray-600 focus:outline-none">
-                        {{ showLogin ? 'Close' : 'Login/Register' }}
-                    </button>
-                </div>
+            <div class="flex items-center gap-3">
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Login</button>
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Register</button>
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
             </div>
-
-            <!-- Login and Register Buttons (Desktop) -->
-            <div class="hidden md:flex items-center space-x-4">
-                <a href="#" class="text-gray-800 hover:text-gray-600">Login</a>
-                <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600">Register</a>
-            </div>
-
-        </div>
     </header>
+
+    <script>
+        const navLinks = document.querySelector('.nav-links')
+        function onToggleMenu(e){
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navLinks.classList.toggle('top-[9%]')
+        }
+    </script>
