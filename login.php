@@ -2,6 +2,12 @@
 session_start();
 require_once("config.php");
 
+// Check if the user is already logged in
+if(isset($_SESSION["user_email"])){
+    header("Location: dashboard.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
