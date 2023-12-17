@@ -142,7 +142,7 @@
       <!-- nav - end -->
     </div>
 
-    <div class="border-t border-gray-800 py-8 text-center text-sm text-gray-400">© 2021 - Present Flowrift. All rights reserved.</div>
+    <div class="border-t border-gray-800 py-8 text-center text-sm text-gray-400">© 2021 - OneNetly. All rights reserved.</div>
   </footer>
 </div>
 
