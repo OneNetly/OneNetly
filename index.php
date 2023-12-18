@@ -1,19 +1,29 @@
 <?php include('header.php'); ?>
 <?php include 'config.php'; ?>
+
 <body class="bg-gray-100">
     <div class="max-w-3xl mx-auto p-6 bg-white mt-8 rounded-lg shadow-lg">
         <h1 class="text-2xl font-semibold mb-4">File Upload</h1>
 
-        <form action="index.php" method="post" enctype="multipart/form-data" class="space-y-4">
+        <!-- Add enctype attribute for file uploads -->
+        <form action="index.php" method="post" enctype="multipart/form-data" class="space-y-4" id="uploadForm">
             <div class="flex flex-col">
                 <label for="file" class="mb-2">Choose a file to upload:</label>
                 <input type="file" name="file" id="file" class="border p-2 rounded-md" />
             </div>
 
-            <button type="submit" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition duration-300">Upload</button>
+            <!-- Progress bar -->
+            <div id="progressWrapper" class="hidden mt-4">
+                <div id="progressBar" class="bg-blue-500 text-white p-2 rounded-md" style="width: 0;"></div>
+                <div id="progressText" class="text-sm mt-2"></div>
+            </div>
+
+            <button type="submit"
+                class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition duration-300">Upload</button>
         </form>
-        </div>
-<?php
+    </div>
+
+    <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $file = $_FILES['file'];
 
@@ -35,40 +45,100 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             curl_setopt($curl, CURLOPT_HTTPHEADER, ['Authorization: Bearer ' . $apiKey]);
             curl_setopt($curl, CURLOPT_POST, true);
             curl_setopt($curl, CURLOPT_POSTFIELDS, ['file' => new CURLFile($file['tmp_name'], $file['type'], $file['name'])]);
-            $response = json_decode(curl_exec($curl), true);
 
-            if ($response && is_array($response) && isset($response['value'])) {
+            // Return the transfer as a string
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+
+            // Get response
+            $response = curl_exec($curl);
+
+            // Close cURL session
+            curl_close($curl);
+
+            $responseArray = json_decode($response, true);
+
+            if ($responseArray && is_array($responseArray) && isset($responseArray['value'])) {
                 // Save file information to your database, including CID
-                $cid = $response['value']['cid'];
+                $cid = $responseArray['value']['cid'];
 
                 $stmt = $conn->prepare("INSERT INTO files (file_name, cid) VALUES (?, ?)");
                 $stmt->bind_param('ss', $file['name'], $cid);
                 $stmt->execute();
 
-                // Create a unique shareable download link
-                $downloadLink = "download/$cid";
-                echo '<div class="max-w-3xl mx-auto p-6 bg-white mt-8 rounded-lg shadow-lg">
-                <label for="copyInput" class="block text-sm font-medium text-gray-600 mb-2">Download Link</label>
-                <div class="flex items-center">
-                <input id="copyInput" type="text" value ="https://onenetly.com/' . $downloadLink . '" readonly class="form-input flex-1 mr-2 py-2 px-4 rounded-md border border-gray-300 focus:ring focus:border-blue-300">
-                <button id="copyButton" onclick="copyToClipboard()" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Copy</button>
-
-                </div>
-                </div>';
+                // Return JSON response
+                header('Content-Type: application/json');
+                echo json_encode(['status' => 'success', 'cid' => $cid]);
+                exit;
             } else {
-                echo "File upload to nft.storage failed.";
+                // Return JSON response
+                header('Content-Type: application/json');
+                echo json_encode(['status' => 'error', 'message' => 'File upload to nft.storage failed.']);
+                exit;
             }
-
-            curl_close($curl);
         }
     } else {
-        echo "File upload error.";
+        // Return JSON response
+        header('Content-Type: application/json');
+        echo json_encode(['status' => 'error', 'message' => 'File upload error.']);
+        exit;
     }
 }
 ?>
-
+</body>
 
 <script>
+    document.getElementById("uploadForm").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        var formData = new FormData(this);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "index.php", true);
+
+        // Update progress bar
+        xhr.upload.addEventListener("progress", function (e) {
+            var percent = (e.loaded / e.total) * 100;
+            document.getElementById("progressWrapper").classList.remove("hidden");
+            document.getElementById("progressBar").style.width = percent + "%";
+            document.getElementById("progressText").innerText = "Uploading: " + percent.toFixed(2) + "%";
+        });
+
+        // Handle successful upload
+        xhr.onload = function () {
+            if (xhr.status == 200) {
+                // Reset progress bar
+                document.getElementById("progressWrapper").classList.add("hidden");
+                document.getElementById("progressBar").style.width = "0%";
+                document.getElementById("progressText").innerText = "";
+
+                // Your existing code for displaying download link
+                var response = JSON.parse(xhr.responseText);
+                if (response && response.status === 'success' && response.cid) {
+                    // Create a link element
+                    var downloadLink = "https://onenetly.com/download/" + response.cid;
+                    var linkElement = document.createElement("a");
+                    linkElement.href = downloadLink;
+                    linkElement.textContent = "Download Link";
+
+                    // Append the link to the container
+                    var container = document.getElementById("downloadLinkContainer");
+                    container.innerHTML = ""; // Clear existing content
+                    container.appendChild(linkElement);
+                } else {
+                    console.error("File upload to nft.storage failed.");
+                }
+            }
+        };
+
+        // Handle errors
+        xhr.onerror = function () {
+            console.error("File upload error.");
+        };
+
+        xhr.send(formData);
+    });
+
+    // Function to copy to clipboard
     function copyToClipboard() {
         var copyText = document.getElementById("copyInput");
         copyText.select();
