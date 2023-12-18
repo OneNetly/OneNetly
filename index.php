@@ -4,7 +4,7 @@
     <div class="max-w-3xl mx-auto p-6 bg-white mt-8 rounded-lg shadow-lg">
         <h1 class="text-2xl font-semibold mb-4">File Upload</h1>
 
-        <form action="file.php" method="post" enctype="multipart/form-data" class="space-y-4">
+        <form action="index.php" method="post" enctype="multipart/form-data" class="space-y-4">
             <div class="flex flex-col">
                 <label for="file" class="mb-2">Choose a file to upload:</label>
                 <input type="file" name="file" id="file" class="border p-2 rounded-md" />
