@@ -1,9 +1,10 @@
-<?php include('../header.php'); ?>
+<?php include('header.php'); ?>
+<?php include 'config.php'; ?>
 <body class="bg-gray-100">
     <div class="max-w-3xl mx-auto p-6 bg-white mt-8 rounded-lg shadow-lg">
         <h1 class="text-2xl font-semibold mb-4">File Upload</h1>
 
-        <form action="file.php" method="post" enctype="multipart/form-data" class="space-y-4">
+        <form action="index.php" method="post" enctype="multipart/form-data" class="space-y-4">
             <div class="flex flex-col">
                 <label for="file" class="mb-2">Choose a file to upload:</label>
                 <input type="file" name="file" id="file" class="border p-2 rounded-md" />
@@ -40,8 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 // Save file information to your database, including CID
                 $cid = $response['value']['cid'];
 
-                $db = new mysqli('104.251.111.203', 'then70970925_home', 'AmiMotiur27@', 'then70970925_home');
-                $stmt = $db->prepare("INSERT INTO files (file_name, cid) VALUES (?, ?)");
+                $stmt = $conn->prepare("INSERT INTO files (file_name, cid) VALUES (?, ?)");
                 $stmt->bind_param('ss', $file['name'], $cid);
                 $stmt->execute();
 
@@ -89,4 +89,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 </script>
 
-<?php include('../footer.php'); ?>
+<?php include('footer.php'); ?>
