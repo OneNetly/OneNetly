@@ -15,4 +15,4 @@
         <input type = "password" id = "password" name = "Password">
         <input type = "Submit" value = "Submit">
     </form>
-<?php include_once ="";?>
+<?php include 'themes/default/footer.php';?>
