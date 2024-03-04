@@ -14,50 +14,57 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
 
     // Check if email exists
-    $sql = "SELECT id, verification_code FROM users WHERE email = :email";
+    $sql = "SELECT id FROM users WHERE email = :email";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':email', $email);
     $stmt->execute();
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user) {
-        // Generate verification code
-        $verification_code = bin2hex(random_bytes(4)); // Generate 4-character verification code
-        // Update verification code in database
-        $sql = "UPDATE users SET verification_code = :verification_code WHERE id = :user_id";
+    if (!$user) {
+        // If email does not exist, add user to database
+        $sql = "INSERT INTO users (email) VALUES (:email)";
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':verification_code', $verification_code);
-        $stmt->bindParam(':user_id', $user['id']);
+        $stmt->bindParam(':email', $email);
         $stmt->execute();
+    }
 
-        // Send verification code to user via email
-        $mail = new PHPMailer(true);
-        try {
-            //Server settings
-            $mail->isSMTP();
-            $mail->Host = 'smtp.gmail.com'; // Your SMTP server
-            $mail->SMTPAuth = true;
-            $mail->Username = 'onenetly@gmail.com'; // Your SMTP username
-            $mail->Password = 'rhwf ufqk rvtc zgvl'; // Your SMTP password
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+    // Generate verification code
+    $verification_code = bin2hex(random_bytes(4)); // Generate 4-character verification code
+    // Update verification code in database
+    $sql = "UPDATE users SET verification_code = :verification_code WHERE email = :email";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':verification_code', $verification_code);
+    $stmt->bindParam(':email', $email);
+    $stmt->execute();
 
-            //Recipients
-            $mail->setFrom('motiurop@outlook.com', 'Motiur Rahman');
-            $mail->addAddress($email);
+    // Send verification code to user via email
+    $mail = new PHPMailer(true);
+    try {
+        //Server settings
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com'; // Your SMTP server
+        $mail->SMTPAuth = true;
+        $mail->Username = 'onenetly@gmail.com'; // Your SMTP username
+        $mail->Password = 'rhwf ufqk rvtc zgvl'; // Your SMTP password
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
 
-            //Content
-            $mail->isHTML(true);
-            $mail->Subject = 'Login Verification Code';
-            $mail->Body = "Your verification code is: $verification_code";
+        //Recipients
+        $mail->setFrom('your_email@gmail.com', 'Your Name');
+        $mail->addAddress($email); // No recipient needed
 
-            $mail->send();
-            echo "Verification code sent to your email.";
-        } catch (Exception $e) {
-            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-        }
-    } else {
-        echo "Email not found.";
+        //Content
+        $mail->isHTML(true);
+        $mail->Subject = 'Login Verification Code';
+        $mail->Body = "Your verification code is: $verification_code";
+
+        $mail->send();
+
+        // Redirect to verify.php with email as parameter
+        header("Location: verify.php?email=$email");
+        exit();
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 }
 ?>
