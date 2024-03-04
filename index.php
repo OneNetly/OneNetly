@@ -4,73 +4,69 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Share Buttons</title>
-<style>
-/* CSS styles for the share buttons */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.share-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.share-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.share-button:hover {
-  background-color: #0056b3;
-}
-</style>
 </head>
 <body>
 
 <!-- HTML structure for the share buttons -->
-<div class="share-buttons">
-  <button class="share-button facebook">Facebook</button>
-  <button class="share-button twitter">Twitter</button>
-  <button class="share-button email">Email</button>
-  <button class="share-button blogger">Blogger</button>
-  <button class="share-button linkedin">LinkedIn</button>
+<div id="shareButtons" style="display: flex; justify-content: space-around; gap: 10px;">
+  <button class="share-button" onclick="shareToFacebook()">Facebook</button>
+  <button class="share-button" onclick="shareToTwitter()">Twitter</button>
+  <button class="share-button" onclick="toggleOverlay()">More</button>
 </div>
 
-<!-- JavaScript code for the share buttons functionality -->
+<!-- Overlay for more buttons -->
+<div id="overlay" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center;">
+  <div style="background-color: #fff; padding: 20px; border-radius: 10px;">
+    <button class="share-button" onclick="shareToPinterest()">Pinterest</button>
+    <button class="share-button" onclick="shareToWhatsapp()">WhatsApp</button>
+    <button class="share-button" onclick="shareToSms()">SMS</button>
+    <button class="share-button" onclick="shareToTumblr()">Tumblr</button>
+    <p style="margin-top: 10px; text-align: center;">Powered by <a href="https://www.onenetlink.com" target="_blank">OneNetlink</a></p>
+  </div>
+</div>
+
+<!-- JavaScript code for toggling overlay and sharing functionality -->
 <script>
-(function() {
-  // Add event listeners to the share buttons
-  document.addEventListener("DOMContentLoaded", function() {
-    const shareButtons = document.querySelectorAll(".share-button");
+function toggleOverlay() {
+  var overlay = document.getElementById("overlay");
+  overlay.style.display = (overlay.style.display === "none" || overlay.style.display === "") ? "flex" : "none";
+}
 
-    shareButtons.forEach(button => {
-      button.addEventListener("click", function() {
-        const pageTitle = document.title;
-        const pageUrl = window.location.href;
+function shareToFacebook() {
+  const pageTitle = document.title;
+  const pageUrl = window.location.href;
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}&t=${encodeURIComponent(pageTitle)}`, "_blank");
+}
 
-        if (button.classList.contains("facebook")) {
-          window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}&t=${encodeURIComponent(pageTitle)}`, "_blank");
-        } else if (button.classList.contains("twitter")) {
-          window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`, "_blank");
-        } else if (button.classList.contains("email")) {
-          window.open(`mailto:?subject=${encodeURIComponent(pageTitle)}&body=${encodeURIComponent(pageUrl)}`, "_blank");
-        } else if (button.classList.contains("blogger")) {
-          window.open(`https://www.blogger.com/blog-this.g?n=${encodeURIComponent(pageTitle)}&source=${encodeURIComponent(pageUrl)}`, "_blank");
-        } else if (button.classList.contains("linkedin")) {
-          window.open(`https://www.linkedin.com/shareArticle?url=${encodeURIComponent(pageUrl)}&title=${encodeURIComponent(pageTitle)}`, "_blank");
-        }
-      });
-    });
-  });
-})();
+function shareToTwitter() {
+  const pageTitle = document.title;
+  const pageUrl = window.location.href;
+  window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(pageUrl)}&text=${encodeURIComponent(pageTitle)}`, "_blank");
+}
+
+function shareToPinterest() {
+  const pageTitle = document.title;
+  const pageUrl = window.location.href;
+  window.open(`https://pinterest.com/pin/create/button/?url=${encodeURIComponent(pageUrl)}&media=&description=${encodeURIComponent(pageTitle)}`, "_blank");
+}
+
+function shareToWhatsapp() {
+  const pageTitle = document.title;
+  const pageUrl = window.location.href;
+  window.open(`https://wa.me/?text=${encodeURIComponent(pageTitle + ' ' + pageUrl)}`, "_blank");
+}
+
+function shareToSms() {
+  const pageTitle = document.title;
+  const pageUrl = window.location.href;
+  window.open(`sms:?&body=${encodeURIComponent(pageTitle + ' ' + pageUrl)}`, "_blank");
+}
+
+function shareToTumblr() {
+  const pageTitle = document.title;
+  const pageUrl = window.location.href;
+  window.open(`https://www.tumblr.com/widgets/share/tool?canonicalUrl=${encodeURIComponent(pageUrl)}&title=${encodeURIComponent(pageTitle)}`, "_blank");
+}
 </script>
 
 </body>
