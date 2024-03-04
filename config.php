@@ -1,14 +1,17 @@
 <?php
-$host = "104.251.111.203";
-$username = "then70970925_home";
-$password = "AmiMotiur27@";
-$database = "then70970925_home";
+// Database connection parameters
+$host = '104.251.111.203'; // MySQL server hostname
+$dbname = 'free91057380_home'; // Database name
+$username = 'free91057380_home'; // MySQL username
+$password = 'AmiMotiur27@'; // MySQL password
 
-// Create connection
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// PDO connection
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    // Set PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    // Display error message
+    die("Connection failed: " . $e->getMessage());
 }
 ?>
