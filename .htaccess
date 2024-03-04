@@ -1,16 +1,3 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^download/([^/]+)$ download.php?cid=$1 [L,QSA]
-</IfModule>
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-
-    # Redirect requests for /whois/example.com to tools/domain.php?domain=example.com
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^whois/([^/]+)$ tools/domain.php?domain=$1 [QSA,L]
-</IfModule>
-
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
