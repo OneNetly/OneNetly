@@ -28,17 +28,6 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <script src="js/lazysizes.min.js" async=""></script>
 
-    <!-- Dark Theme FUOC AVOID -->
-    <script>
-        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-        } else {
-            document.documentElement.classList.remove('dark')
-        }
-    </script>
-    <!--End Dark Theme FUOC AVOID -->
-
     <!-- Google tag (gtag.js) -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-54W25R1NPQ"></script>
@@ -193,9 +182,9 @@
     <!-- Nav Bar Start -->
     <!-- Primary Header Start -->
 
-<body class="dark:bg-gray-900">
+<body>
   <div
-    class="sticky top-0 z-50 w-full border-b border-transparent bg-white text-gray-700 shadow max-lg:max-h-screen max-lg:overflow-y-auto dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    class="sticky top-0 z-50 w-full border-b border-transparent bg-white text-gray-700 shadow max-lg:max-h-screen max-lg:overflow-y-auto">
     <div x-data="{ open: false }"
       class="mx-auto flex max-w-screen-xl flex-col px-2 py-2 lg:flex-row lg:items-center lg:justify-between">
       <div class="flex flex-row items-center justify-between p-4">
@@ -210,43 +199,27 @@
       <!-- For Phone -->
       <nav :class="{'flex': open, 'hidden': !open}"
         class="ml-0 hidden flex-auto flex-col px-5 pt-5 lg:ml-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
-        <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent dark:bg-gray-800 dark:hover:text-white dark:focus:text-white lg:dark:bg-transparent lg:dark:hover:bg-transparent lg:dark:focus:bg-transparent"
+        <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent"
           href="/">Home</a>
 
         <!-- Free Web Hosting -->
-        <div class="relative mt-2 rounded-lg bg-gray-100 p-3 lg:my-0 lg:mt-0 lg:rounded-none lg:bg-transparent lg:p-0 dark:bg-slate-800 lg:dark:bg-transparent">
-          <button @click="open = !open" class="text-md focus:shadow-outline flex w-full flex-row items-center justify-between rounded-lg bg-gray-100 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mb-0 lg:inline-block lg:w-auto lg:bg-transparent lg:px-4 lg:py-3 dark:bg-gray-800 dark:hover:text-white dark:focus:text-white lg:dark:bg-transparent lg:dark:hover:bg-transparent lg:dark:focus:bg-transparent">
+        <div class="relative mt-2 rounded-lg bg-gray-100 p-3 lg:my-0 lg:mt-0 lg:rounded-none lg:bg-transparent lg:p-0">
+          <button @click="open = !open" class="text-md focus:shadow-outline flex w-full flex-row items-center justify-between rounded-lg bg-gray-100 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mb-0 lg:inline-block lg:w-auto lg:bg-transparent lg:px-4 lg:py-3">
             <span>Free Web Hosting</span>
           </button>
         </div>
         <!-- END Web Hosting -->
 
-        <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent dark:bg-gray-800 dark:hover:text-white dark:focus:text-white lg:dark:bg-transparent lg:dark:hover:bg-transparent lg:dark:focus:bg-transparent"
-          href="domain-name.html">Domains</a>
+        <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent"
+          href="https://onenetly.com/cart.php?a=add&domain=register">Domains</a>
           
       </nav>
       <!-- For desktop -->
       <nav :class="{'flex': open, 'hidden': !open}"
         class="mt-6 hidden flex-auto items-center justify-between px-5 pb-10 sm:flex-row sm:items-center lg:mt-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
         
-        <button class="text-md text-left:dark focus:shadow-outline flex flex-row items-center rounded-lg bg-transparent px-4 pr-0 font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none sm:hidden sm:px-4 md:ml-2 md:mt-0 md:hidden dark:bg-transparent dark:hover:bg-transparent dark:hover:text-white dark:focus:bg-transparent dark:focus:text-white">
-          <a href="contact-us.html"><span>Contact</span></a>
-        </button>
-        <div
-          class="mx-2 flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg hover:bg-slate-100 sm:mb-0 dark:hover:bg-gray-700">
-          <svg class="limda-dark h-7 w-7 fill-gray-500 p-1 dark:fill-gray-800" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
-          </svg>
-          <svg class="limda-light h-7 w-7 p-1" class="" fill="currentColor" viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-              fill-rule="evenodd" clip-rule="evenodd"></path>
-          </svg>
-        </div>
         <div class="md:p-4">
-          <a class="text-md focus:shadow-outline ml-2 flex items-center rounded-lg bg-gray-100 px-4 py-2 font-semibold sm:ml-0 md:ml-2 md:mt-0 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+          <a class="text-md focus:shadow-outline ml-2 flex items-center rounded-lg bg-gray-100 px-4 py-2 font-semibold sm:ml-0 md:ml-2 md:mt-0"
             href="/clientarea.php" target="_blank">
             <span class="">Account</span>
             <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -260,101 +233,21 @@
     </div>
   </div>
 
-  <!-- Additional Script for Dark and Light Mode-->
-
-  <script>
-    // icons
-    const sunIcon = document.querySelector(".limda-light")
-    const moonIcon = document.querySelector(".limda-dark")
-
-    // theme vars
-    const userTheme = localStorage.getItem("theme");
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-    // icon toggle
-    const iconToggle = () => {
-       moonIcon.classList.toggle("display-none");
-       sunIcon.classList.toggle("display-none");
-    }
-
-    // initial theme check
-    const themeCheck = () => {
-       if (userTheme === "dark" || (!userTheme && systemTheme)) {
-          document.documentElement.classList.add("dark");
-          moonIcon.classList.add("display-none");
-          return;
-       }
-       sunIcon.classList.add("display-none");
-    }
-
-    // manual theme switch
-    const themeSwitch = () => {
-       if (document.documentElement.classList.contains("dark")) {
-          document.documentElement.classList.remove("dark");
-          localStorage.setItem("theme", "light");
-          iconToggle();
-          return;
-       }
-       document.documentElement.classList.add("dark");
-       localStorage.setItem("theme", "dark");
-       iconToggle();
-    }
-
-
-    // call theme switch on clicking button
-    sunIcon.addEventListener("click", () => {
-       themeSwitch();
-    })
-    moonIcon.addEventListener("click", () => {
-       themeSwitch();
-    })
-    // invoke theme check on initial load
-    themeCheck();
-  </script>
-
-  <!-- End Addition Dark and Light Mode Script -->
-
-  <!-- Primary Header End -->
-</body>
-    <!-- Nav Bar End -->
-
-<style>
-    input.truncate.bg-white.text-xl.text-gray-400.px-2 {
-        border: none;
-        outline: none;
-    }
-
-    select#Com\  {
-        border: none;
-        outline: none;
-    }
-
-    input.truncate.bg-white.text-xl.text-gray-400.px-2:focus {
-        border: none;
-        outline: none;
-    }
-
-    select#Com\:focus {
-        border: none;
-        outline: none;
-    }
-</style>
-
 <!-- Hero-->
-<div class="w-full dark:bg-gray-900 ">
+<div class="w-full">
     <div class="max-w-7xl mx-auto px-6 pt-16 sm:py-16 sm:pt-18 pb-10 sm:pb-18">
         <div class="flex flex-auto flex-col md:flex-row items-center">
 
             <!-- Left side -->
             <div class="flex-none md:flex-1">
-                <div class="text-gray-900 text-4xl font-bold mb-10 dark:text-gray-100">Build, expand <br class="sm:hidden md:block lg:hidden"> your website
+                <div class="text-gray-900 text-4xl font-bold mb-10">Build, expand <br class="sm:hidden md:block lg:hidden"> your website
                     <br>
                     <ht class="font-bold text-blue-500"> without sweating </ht>
                 </div>
-                <span class="text-gray-700 text-xl font-normal dark:text-gray-400 md:pr-14">Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!</span>
+                <span class="text-gray-700 text-xl font-normal md:pr-14">Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!</span>
 
                 <div class="flex flex-auto max-w-sm mt-12">
-                    <button class="bg-gray-900 dark:bg-blue-600 px-5 py-2.5 rounded-lg ">
+                    <button class="bg-gray-900 px-5 py-2.5 rounded-lg ">
                         <div class="text-white text-md md:text-lg font-semibold text-center"><a href="web-hosting.html"> Get Started</a>
                         </div>
                     </button>
@@ -363,37 +256,37 @@
 
             <!-- Right Side -->
             <div class="flex justify-end md:flex-1">
-                <img src="img/hero.svg" alt="Hero Limda" class="mt-14 md:mt-0 ml-5">
+                <img src="img/hero.svg" alt="Hero OneNetly" class="mt-14 md:mt-0 ml-5">
             </div>
         </div>
 
         <div class="-mt-8 sm:mt-3 sm:flex flex-grow items-center max-w-7xl mx-auto py-4 sm:py-10">
-            <div class="md:flex flex-grow items-center mt-10 py-8 rounded-xl shadow-xl bg-gray-900 sm:bg-blue-50 dark:bg-gray-800 px-8 sm:px-12">
+            <div class="md:flex flex-grow items-center mt-10 py-8 rounded-xl shadow-xl bg-gray-900 sm:bg-blue-50 px-8 sm:px-12">
 
                 <div class="w-full lg:w-auto flex items-center">
-                    <div class="w-full bg-white dark:bg-gray-600 rounded-lg overflow-hidden px-2 sm:px-4 py-1 sm:py-1 justify-between">
+                    <div class="w-full bg-white rounded-lg overflow-hidden px-2 sm:px-4 py-1 sm:py-1 justify-between">
                         <form action="https://onenetly.com/cart.php?a=add&domain=register" method="post">
-                            <input class="truncate bg-white dark:bg-gray-600 text-xl text-gray-400 dark:text-gray-200 p-1.5 focus:outline-none" name="query" type="text" placeholder="Domain name">
+                            <input class="truncate bg-white text-xl text-gray-400 p-1.5 focus:outline-none" name="query" type="text" placeholder="Domain name">
                             </input>
                     </div>
                 </div>
 
                 <div class="mt-4 sm:mt-0">
-                    <button class="w-full sm:pb-3 flex-grow bg-blue-500 dark:bg-blue-600 text-white text-xl rounded-lg px-4 py-2.5 sm:py-2 font-normal sm:ml-3" type="submit" name="keyword">Search</button>
+                    <button class="w-full sm:pb-3 flex-grow bg-blue-500 text-white text-xl rounded-lg px-4 py-2.5 sm:py-2 font-normal sm:ml-3" type="submit" name="keyword">Search</button>
                 </div>
                 </form>
 
                 <div class="mt-6 sm:mt-0 lg:flex flex-1 items-center sm:ml-20 max-lg:hidden">
                     <div class="mt-2 sm:mt-0 mx-auto flex flex-grow items-center sm:mr-0 ">
-                        <img src="img/icons/com.png" alt=" " class="h-10 mr-3 "> <span class="-mt-2 dark:text-gray-100">$16.74</span>
+                        <img src="img/icons/com.png" alt=" " class="h-10 mr-3 "> <span class="-mt-2">$16.74</span>
                     </div>
 
                     <div class="mt-2 sm:mt-0 mx-auto flex flex-grow items-center sm:mr-0 ">
-                        <img src="img/icons/net.png" alt=" " class="h-8 mr-3 "> <span class="-mt-2 dark:text-gray-100"> $19.14</span>
+                        <img src="img/icons/net.png" alt=" " class="h-8 mr-3 "> <span class="-mt-2"> $19.14</span>
                     </div>
 
                     <div class="mt-2 sm:mt-0 mx-auto flex flex-grow items-center sm:mr-0 ">
-                        <img src="img/icons/org.png" alt=" " class="h-6 mr-3 "> <span class="-mt-2 dark:text-gray-100">$11.39</span>
+                        <img src="img/icons/org.png" alt=" " class="h-6 mr-3 "> <span class="-mt-2">$11.39</span>
                     </div>
                 </div>
             </div>
@@ -404,17 +297,17 @@
 
 
 <!--  CTA Section: Featured Image -->
-<div class="w-full bg-white dark:bg-gray-900">
+<div class="w-full bg-white">
     <div class="space-y-16 sm:space-y-16 sm:divide-transparent max-w-7xl mx-auto px-6 py-6 sm:py-0 pt-16 pb-16">
-        <div class="sm:flex items-center bg-blue-white sm:dark:bg-gray-800 sm:shadow-lg rounded-xl py-2 md:py-16 lg:py-0 sm:px-20 sm:mt-8">
+        <div class="sm:flex items-center bg-blue-white sm:shadow-lg rounded-xl py-2 md:py-16 lg:py-0 sm:px-20 sm:mt-8">
             <div class="sm:flex-1 md:w-7/12">
-                <h2 class="text-3xl md:text-4xl font-extrabold dark:text-gray-100">Enjoy quick and efficient load times stand out
+                <h2 class="text-3xl md:text-4xl font-extrabold">Enjoy quick and efficient load times stand out
                     <span class="text-blue-500">from the Pack</span>
                 </h2>
                 <div class="mt-6 flex md:w-5/12 justify-center items-center lg:hidden">
                     <lottie-player src="assets/lotties/speed-meter.json" background="transparent.html" speed="1" style="margin-top: -60px; margin-bottom: -85px; margin-left: -80px; width: 400px; height: 400px;" loop autoplay></lottie-player>
                 </div>
-                <p class="mt-8 text-lg pr-0 sm:pr-8 dark:text-gray-400">We're constantly working to make your website perform smoothly. All of the websites we host have static and dynamic caching enabled, which makes them up to 20 times faster. Additionally, we preinstall the LiteSpeed Cache plugin, which offers out-of-the-box media and front-end optimizations, as well as environmental management for improved speed, in all instances.</p>
+                <p class="mt-8 text-lg pr-0 sm:pr-8">We're constantly working to make your website perform smoothly. All of the websites we host have static and dynamic caching enabled, which makes them up to 20 times faster. Additionally, we preinstall the LiteSpeed Cache plugin, which offers out-of-the-box media and front-end optimizations, as well as environmental management for improved speed, in all instances.</p>
             </div>
 
             <div class="flex md:w-5/12 justify-center items-center max-lg:hidden">
@@ -422,20 +315,20 @@
             </div>
         </div>
 
-        <div class="sm:flex items-center bg-blue-white sm:dark:bg-gray-800 sm:shadow-lg rounded-xl py-2 sm:py-16 sm:px-20 sm:mt-8">
+        <div class="sm:flex items-center bg-blue-white sm:shadow-lg rounded-xl py-2 sm:py-16 sm:px-20 sm:mt-8">
             <div class="flex md:w-5/12 justify-center items-center max-lg:hidden">
                 <lottie-player src="assets/lotties/security2.json" background="transparent.html" speed="1" style="width: 370px; height: 370px;" loop autoplay></lottie-player>
             </div>
 
             <div class="sm:flex-1 sm:w-7/12">
-                <h2 class="text-3xl md:text-4xl font-extrabold dark:text-gray-100">
+                <h2 class="text-3xl md:text-4xl font-extrabold">
                     Security for you and <br> <span class="text-blue-500">your customers</span>
                 </h2>
                 <div class="mt-6 flex md:w-5/12 justify-center items-center lg:hidden">
                     <lottie-player src="assets/lotties/security2.json" background="transparent.html" speed="1" style="margin-top: 26px; margin-left: -25px; width: 310px; height: 310px " loop autoplay></lottie-player>
                 </div>
 
-                <p class="mt-8 text-lg pr-0 sm:pr-8 dark:text-gray-400">At Limda, your website's security and privacy are our top priorities, and we will always stand up for individual and consumer online rights. Our mission is to keep the Internet open, free, and secure for everyone. Take the worry out of security with low-cost SSL Certificates, PremiumDNS, VPN, and 2-Factor Authentication — all of which are included for free with your account.
+                <p class="mt-8 text-lg pr-0 sm:pr-8">At OneNetly, your website's security and privacy are our top priorities, and we will always stand up for individual and consumer online rights. Our mission is to keep the Internet open, free, and secure for everyone.
 
                 </p>
             </div>
@@ -449,25 +342,25 @@
 
     <!-- Heading -->
     <div class="lg:w-1/2 text-left lg:text-left pb-6 sm:pb-8">
-        <div class="text-sm uppercase font-bold tracking-wider mb-1 text-blue-500 dark:text-blue-500">
+        <div class="text-sm uppercase font-bold tracking-wider mb-1 text-blue-500">
             Exciting features
         </div>
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-2 dark:text-gray-100">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-2  ">
             All Plans Included
         </h2>
-        <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-600 dark:text-gray-400">
+        <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-600">
             Some of the reasons why you'll enjoy hosting with us.
         </h3>
     </div>
     <!-- END Heading -->
 
     <!-- Features Section: Modern Alternate With Icons -->
-    <div class="dark:bg-gray-900 bg-white">
+    <div class="bg-white">
         <div class="space-y-16 container xl:max-w-7xl mx-auto pt-4 lg:py-6">
 
             <!-- Features -->
             <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-8 md:gap-6">
-                <div class="group p-8 transition ease-out duration-200 bg-white dark:bg-gray-800 shadow-lg rounded-2xl border-gray-200">
+                <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
                     <div class="text-left">
                         <div class="inline-flex items-center justify-center w-8 h-8 m-5 mb-10 relative">
                             <div class="absolute inset-0 rounded-3xl -m-5 transform rotate-3 bg-purple-300 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 group-hover:shadow-lg">
@@ -479,12 +372,12 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left dark:text-gray-100"> Lightning Speed
+                    <h4 class="text-lg font-bold mb-2 text-left  "> Lightning Speed
                     </h4>
-                    <p class="leading-relaxed text-gray-600 dark:text-gray-400"> Any website's speed is crucial. We use the 9x faster LiteSpeed server than Apache for our web hosting. </p>
+                    <p class="leading-relaxed text-gray-600   "> Any website's speed is crucial. We use the 9x faster LiteSpeed server than Apache for our web hosting. </p>
                 </div>
 
-                <div class="group p-8 transition ease-out duration-200 bg-white dark:bg-gray-800 shadow-lg rounded-2xl border-gray-200">
+                <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
                     <div class="text-left">
                         <div class="inline-flex items-center justify-center w-8 h-8 m-5 mb-10 relative">
                             <div class="absolute inset-0 rounded-3xl -m-5 transform rotate-3 bg-red-300 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 group-hover:shadow-lg">
@@ -497,15 +390,15 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left dark:text-gray-100">
+                    <h4 class="text-lg font-bold mb-2 text-left  ">
                         Control Panel
                     </h4>
-                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+                    <p class="leading-relaxed text-gray-600   ">
                         We want to make it simple for everyone to establish a website, so we need to be able to
                         provide an expensive cPanel.
                     </p>
                 </div>
-                <div class="group p-8 transition ease-out duration-200 bg-white dark:bg-gray-800 shadow-lg rounded-2xl border-gray-200">
+                <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
                     <div class="text-left">
                         <div class="inline-flex items-center justify-center w-8 h-8 m-5 mb-10 relative">
                             <div class="absolute inset-0 rounded-3xl -m-5 transform rotate-3 bg-green-300 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 group-hover:shadow-lg">
@@ -517,14 +410,14 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left dark:text-gray-100">
+                    <h4 class="text-lg font-bold mb-2 text-left  ">
                         Powerful Hardware
                     </h4>
 
-                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+                    <p class="leading-relaxed text-gray-600   ">
                         We're using enterprise-grade hardware to give your site an extra speed boost! NVMe SSD RAID-10 is standard on all of our servers. </p>
                 </div>
-                <div class="group p-8 transition ease-out duration-200 bg-white dark:bg-gray-800 shadow-lg rounded-2xl border-gray-200">
+                <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
                     <div class="text-left">
                         <div class="inline-flex items-center justify-center w-8 h-8 m-5 mb-10 relative">
                             <div class="absolute inset-0 rounded-3xl -m-5 transform rotate-3 bg-gray-300 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 group-hover:shadow-lg">
@@ -540,14 +433,14 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left dark:text-gray-100"> Solid Security
+                    <h4 class="text-lg font-bold mb-2 text-left  "> Solid Security
 
                     </h4>
-                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+                    <p class="leading-relaxed text-gray-600   ">
                         With enterprise-grade security, Solid Security, Firewall technologies, you can safeguard your brand and audience.
                     </p>
                 </div>
-                <div class="group p-8 transition ease-out duration-200 bg-white dark:bg-gray-800 shadow-lg rounded-2xl border-gray-200">
+                <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
                     <div class="text-left">
                         <div class="inline-flex items-center justify-center w-8 h-8 m-5 mb-10 relative">
                             <div class="absolute inset-0 rounded-3xl -m-5 transform rotate-3 bg-blue-300 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 group-hover:shadow-lg">
@@ -559,14 +452,14 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left dark:text-gray-100">
+                    <h4 class="text-lg font-bold mb-2 text-left  ">
                         Money Guarantee
                     </h4>
-                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+                    <p class="leading-relaxed text-gray-600   ">
                         We're so confident in our web hosting service that we back it up with a 30-day money-back guarantee.
                     </p>
                 </div>
-                <div class="group p-8 transition ease-out duration-200 bg-white dark:bg-gray-800 shadow-lg rounded-2xl border-gray-200">
+                <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
                     <div class="text-left">
                         <div class="inline-flex items-center justify-center w-8 h-8 m-5 mb-10 relative">
                             <div class="absolute inset-0 rounded-3xl -m-5 transform rotate-3 bg-yellow-300 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 group-hover:shadow-lg">
@@ -578,16 +471,16 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left dark:text-gray-100">
+                    <h4 class="text-lg font-bold mb-2 text-left  ">
                         Full Flexibility
 
                     </h4>
-                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+                    <p class="leading-relaxed text-gray-600   ">
                         With monthly contract terms, you have complete flexibility. You can change your bundle at
                         any moment to fit your needs.
                     </p>
                 </div>
-                <div class="group p-8 transition ease-out duration-200 bg-white dark:bg-gray-800 shadow-lg rounded-2xl border-gray-200">
+                <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
                     <div class="text-left">
                         <div class="inline-flex items-center justify-center w-8 h-8 m-5 mb-10 relative">
                             <div class="absolute inset-0 rounded-3xl -m-5 transform rotate-3 bg-indigo-300 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 group-hover:shadow-lg">
@@ -599,16 +492,16 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left dark:text-gray-100">
+                    <h4 class="text-lg font-bold mb-2 text-left  ">
                         Transparency
                     </h4>
-                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+                    <p class="leading-relaxed text-gray-600   ">
                         Before you place an order, you will receive complete information about the goods, package,
                         and price.
 
                     </p>
                 </div>
-                <div class="group p-8 transition ease-out duration-200 bg-white dark:bg-gray-800 shadow-lg rounded-2xl border-gray-200">
+                <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
                     <div class="text-left">
                         <div class="inline-flex items-center justify-center w-8 h-8 m-5 mb-10 relative">
                             <div class="absolute inset-0 rounded-3xl -m-5 transform rotate-3 bg-red-300 transition ease-out duration-200 group-hover:-rotate-3 group-hover:scale-105 group-hover:shadow-lg">
@@ -620,10 +513,10 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left dark:text-gray-100">
+                    <h4 class="text-lg font-bold mb-2 text-left  ">
                         SSL Certificate
                     </h4>
-                    <p class="leading-relaxed text-gray-600 dark:text-gray-400">
+                    <p class="leading-relaxed text-gray-600   ">
                         A free SSL certificate is included with every site hosted by OneNetly in order to avoid any "insecure" warnings.
 
                     </p>
@@ -645,12 +538,12 @@
     <div class="">
         <div class="max-w-7xl mx-auto pt-8 pb-0 md:pt-10 md:pb-6">
             <div class="bg-cover rounded-md mb-8" style="background-image: url('img/limda-host-server-home.jpg');">
-                <div class="rounded-md px-10 py-12 md:py-16 bg-blue-700 dark:bg-gray-800 bg-opacity-80 dark:bg-opacity-80 text-center shadow-xl">
+                <div class="rounded-md px-10 py-12 md:py-16 bg-blue-700   bg-opacity-80 text-center shadow-xl">
                     <!-- Heading -->
                     <h2 class="text-2xl md:text-3xl font-extrabold mb-1 text-white">
                         Trusted by thousands of professionals
                     </h2>
-                    <h4 class="text-md md:text-lg font-medium text-gray-100 dark:text-gray-300 leading-relaxed lg:w-3/4 mx-auto mb-6 md:mb-10">
+                    <h4 class="text-md md:text-lg font-medium text-gray-100 leading-relaxed lg:w-3/4 mx-auto mb-6 md:mb-10">
                         Web developers from all over the world are using our products. Join them and build
                         something!
                     </h4>
@@ -659,37 +552,37 @@
                     <!-- Stats -->
                     <div class="grid grid-cols-1 sm:grid-cols-4 text-center divide-y sm:divide-y-0 sm:divide-x-4 divide-white divide-opacity-10">
                         <dl class="space-y-1 p-5">
-                            <dt class="text-4xl font-extrabold text-white dark:text-blue-500">
+                            <dt class="text-4xl font-extrabold text-white">
                                 5,000+
                             </dt>
-                            <dd class="text-sm uppercase tracking-wide font-semibold text-gray-200 dark:text-gray-200">
+                            <dd class="text-sm uppercase tracking-wide font-semibold text-gray-200">
                                 Clients
                             </dd>
                         </dl>
 
                         <dl class="space-y-1 p-5">
-                            <dt class="text-4xl font-extrabold text-white dark:text-blue-500">
+                            <dt class="text-4xl font-extrabold text-white">
                                 10,000+
                             </dt>
-                            <dd class="text-sm uppercase tracking-wide font-semibold text-gray-200 dark:text-gray-200">
+                            <dd class="text-sm uppercase tracking-wide font-semibold text-gray-200">
                                 Sites hosted
                             </dd>
                         </dl>
 
                         <dl class="space-y-1 p-5">
-                            <dt class="text-4xl font-extrabold text-white dark:text-blue-500">
+                            <dt class="text-4xl font-extrabold text-white">
                                 10+
                             </dt>
-                            <dd class="text-sm uppercase tracking-wide font-semibold text-gray-200 dark:text-gray-200">
+                            <dd class="text-sm uppercase tracking-wide font-semibold text-gray-200">
                                 Datacenter locations
                             </dd>
                         </dl>
 
                         <dl class="space-y-1 p-5">
-                            <dt class="text-4xl font-extrabold text-white dark:text-blue-500">
+                            <dt class="text-4xl font-extrabold text-white">
                                 50+
                             </dt>
-                            <dd class="text-sm uppercase tracking-wide font-semibold text-gray-200 dark:text-gray-200">
+                            <dd class="text-sm uppercase tracking-wide font-semibold text-gray-200">
                                 Servers
                             </dd>
                         </dl>
@@ -718,18 +611,18 @@
 <!-- END Testimonials Section: Large Photo --><!-- END Testimonials -->
 
 <!--  Partners -->
-<div class="w-full bg-white dark:bg-gray-900 mt-0 ">
+<div class="w-full bg-white mt-0 ">
     <div class="max-w-7xl mx-auto px-6 py-16 pb-24 sm:pt-12 sm:pb-32 ">
 
         <!-- Heading -->
         <div class="lg:w-1/2 text-left lg:text-left pb-12 sm:pb-14">
-            <div class="text-sm uppercase font-bold tracking-wider mb-1 text-blue-500 dark:text-blue-500">
+            <div class="text-sm uppercase font-bold tracking-wider mb-1 text-blue-500">
                 OneNetly's partners
             </div>
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-2 dark:text-gray-100">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-2">
                 Meet Partners
             </h2>
-            <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-600 dark:text-gray-400">
+            <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-600">
                 We collaborate with a wide range of extraordinary companies.
             </h3>
         </div>
@@ -737,29 +630,29 @@
 
         <div class="grid grid-cols-2 sm:grid-cols-6 gap-6 sm:gap-6">
 
-            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white dark:bg-gray-800 dark:hover:filter-none flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
-                <img src="img/partners/webuzo.png" class="w-full rounded-xl dark:filter dark:brightness-0 dark:invert dark:hover:filter-none" alt="Webuzo">
+            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
+                <img src="img/partners/webuzo.png" class="w-full rounded-xl" alt="Webuzo">
             </div>
 
-            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white dark:bg-gray-800 flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
-                <img src="img/partners/cpanel.png" class="w-full rounded-xl dark:filter dark:brightness-0 dark:invert dark:hover:filter-none" alt="cPanel">
+            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
+                <img src="img/partners/cpanel.png" class="w-full rounded-xl" alt="cPanel">
             </div>
 
-            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white dark:bg-gray-800 flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
-                <img src="img/partners/directadmin.png" class="w-full rounded-xl dark:filter dark:brightness-0 dark:invert dark:hover:filter-none" alt="DirectAdmin">
+            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
+                <img src="img/partners/directadmin.png" class="w-full rounded-xl" alt="DirectAdmin">
             </div>
 
-            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white dark:bg-gray-800 flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
-                <img src="img/partners/virtualizor.png" class="w-full rounded-xl dark:filter dark:brightness-0 dark:invert dark:hover:filter-none" alt="Virtualizor">
+            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
+                <img src="img/partners/virtualizor.png" class="w-full rounded-xl" alt="Virtualizor">
             </div>
 
 
-            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white dark:bg-gray-800 flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
-                <img src="img/partners/litespeed.png" class="w-full rounded-xl dark:filter dark:brightness-0 dark:invert dark:hover:filter-none" alt="LiteSpeed">
+            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
+                <img src="img/partners/litespeed.png" class="w-full rounded-xl" alt="LiteSpeed">
             </div>
 
-            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white dark:bg-gray-800 flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
-                <img src="img/partners/cloudlinux.png" class="w-full rounded-xl dark:filter dark:brightness-0 dark:invert dark:hover:filter-none" alt="CloudLinux">
+            <div class="h-16 md:h-12 lg:h-16 p-8 md:p-4 lg:p-8 bg-white flex flex-col justify-center items-center shadow-xl rounded-xl overflow-hidden">
+                <img src="img/partners/cloudlinux.png" class="w-full rounded-xl" alt="CloudLinux">
             </div>
 
         </div>
