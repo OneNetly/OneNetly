@@ -1,0 +1,566 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<!-- Head Template Start -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>Payment Methods - OneNetly</title>
+    <meta name="metaTitle" content="Payment Methods - OneNetly">
+    <meta name="description" content="Read our privacy policy to understand how OneNetly protects your personal information and ensures your privacy. Our comprehensive privacy policy outlines the types of data we collect, how we use and store it, and the measures we take to keep your information secure.">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="privacy-policy.html">
+    <meta property="og:title" content="Payment Methods - OneNetly">
+    <meta property="og:description" content="Read our privacy policy to understand how OneNetly protects your personal information and ensures your privacy. Our comprehensive privacy policy outlines the types of data we collect, how we use and store it, and the measures we take to keep your information secure.">
+    <meta property="og:image" content="img/og.jpg" />
+
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+    <link href="assets/fonts/Inter/inter.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <script src="js/lazysizes.min.js" async=""></script>
+
+    <!-- Dark Theme FUOC AVOID -->
+    <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+    <!--End Dark Theme FUOC AVOID -->
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-75NMYJ3657"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-75NMYJ3657');
+    </script>
+
+    <!-- End Google tag (gtag.js) -->
+
+    <style>
+        /* Tooltip */
+        @media only screen and (max-width: 600px) {
+            .tooltip .tooltiptext {
+                margin-left: -20px !important;
+            }
+
+            .tooltip .tooltiptext::after {
+                left: 8.70% !important;
+            }
+
+        }
+
+
+        .tooltip {
+            position: relative;
+            cursor: context-menu;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 230px;
+            background-color: #6b7280;
+            opacity: 1;
+            color: white;
+            font-size: 13px;
+            line-height: 1.3em;
+            font-weight: 400;
+            text-align: center;
+            border-radius: 10px;
+            padding: 10px;
+            position: absolute;
+            z-index: 10;
+            bottom: 150%;
+            left: 50%;
+            margin-left: -115px;
+        }
+
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #6b7280 transparent transparent transparent;
+            z-index: 10;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+        }
+
+        /* End Tooltip*/
+
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* !important Billed Annually check button*/
+        .toggle-bg:after {
+            background: #fff;
+            border-color: #d1d5db;
+            border-radius: 9999px;
+            border-width: 1px;
+            content: "";
+            height: 1.25rem;
+            left: .125rem;
+            position: absolute;
+            top: .125rem;
+            transition-duration: .15s;
+            width: 1.25rem
+        }
+        .billedAnnuallySwitch::after{
+            top: 0.6rem !important;
+        }
+
+        input:checked+.toggle-bg:after {
+            border-color: #fff;
+            transform: translateX(100%);
+        }
+
+        input:checked+.toggle-bg {
+            background: #1c64f2;
+            border-color: #1c64f2
+        }
+
+        select {
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+            background-image: url(img/arrow-down.svg);
+            background-position: right 0.8rem center;
+            background-repeat: no-repeat;
+            background-size: .6em .6em;
+            padding-right: 2.5rem;
+
+        }
+
+        select {
+            -webkit-appearance: none;
+            appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: '';
+        }
+
+        .plan-check {
+            width: 17px;
+            min-width: 17px;
+        }
+
+        .toggle-bg:after {
+            background: #fff;
+            border-color: #d1d5db;
+            border-radius: 9999px;
+            border-width: 1px;
+            box-shadow: var(--tw-ring-inset) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color);
+            content: "";
+            height: 1.25rem;
+            left: .125rem;
+            position: absolute;
+            top: .125rem;
+            transition-duration: .15s;
+            transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+            width: 1.25rem
+        }
+    </style>
+</head>
+<!-- Head Template End -->
+
+<!-- Set currency at the localStorage based on the user location -->
+<script>
+    let currency = localStorage.getItem("currency");
+    if(!currency){
+        localStorage.setItem('currency', 'USD');currency = "USD";    };
+</script>
+
+
+    <!-- Nav Bar Start -->
+    <!-- Primary Header Start -->
+
+    <body class="dark:bg-gray-900">
+      <div
+        class="sticky top-0 z-50 w-full border-b border-transparent bg-white text-gray-700 shadow max-lg:max-h-screen max-lg:overflow-y-auto dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200">
+        <div x-data="{ open: false }"
+          class="mx-auto flex max-w-screen-xl flex-col px-2 py-2 lg:flex-row lg:items-center lg:justify-between">
+          <div class="flex flex-row items-center justify-between p-4">
+            <a href="/"> <img class="h-auto w-48" src="https://onenetly.com/img/logo.png" alt="OneNetly Logo" /> </a>
+            <button class="focus:shadow-outline rounded-lg focus:outline-none lg:hidden" @click="open = !open">
+              <svg fill="currentColor" viewBox="0 0 20 20" class="h-6 w-6">
+                <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" style="display: none;"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- For Phone -->
+          <nav :class="{'flex': open, 'hidden': !open}"
+            class="ml-0 hidden flex-auto flex-col px-5 pt-5 lg:ml-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
+            <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent dark:bg-gray-800 dark:hover:text-white dark:focus:text-white lg:dark:bg-transparent lg:dark:hover:bg-transparent lg:dark:focus:bg-transparent"
+              href="/">Home</a>
+    
+            <!-- Free Web Hosting -->
+            <div class="relative mt-2 rounded-lg bg-gray-100 p-3 lg:my-0 lg:mt-0 lg:rounded-none lg:bg-transparent lg:p-0 dark:bg-slate-800 lg:dark:bg-transparent">
+              <button @click="open = !open" class="text-md focus:shadow-outline flex w-full flex-row items-center justify-between rounded-lg bg-gray-100 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mb-0 lg:inline-block lg:w-auto lg:bg-transparent lg:px-4 lg:py-3 dark:bg-gray-800 dark:hover:text-white dark:focus:text-white lg:dark:bg-transparent lg:dark:hover:bg-transparent lg:dark:focus:bg-transparent">
+                <span>Free Web Hosting</span>
+              </button>
+            </div>
+            <!-- END Web Hosting -->
+    
+            <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent dark:bg-gray-800 dark:hover:text-white dark:focus:text-white lg:dark:bg-transparent lg:dark:hover:bg-transparent lg:dark:focus:bg-transparent"
+              href="domain-name.html">Domains</a>
+              
+          </nav>
+          <!-- For desktop -->
+          <nav :class="{'flex': open, 'hidden': !open}"
+            class="mt-6 hidden flex-auto items-center justify-between px-5 pb-10 sm:flex-row sm:items-center lg:mt-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
+            
+            <button class="text-md text-left:dark focus:shadow-outline flex flex-row items-center rounded-lg bg-transparent px-4 pr-0 font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none sm:hidden sm:px-4 md:ml-2 md:mt-0 md:hidden dark:bg-transparent dark:hover:bg-transparent dark:hover:text-white dark:focus:bg-transparent dark:focus:text-white">
+              <a href="contact-us.html"><span>Contact</span></a>
+            </button>
+            <div
+              class="mx-2 flex h-9 w-9 cursor-pointer items-center justify-center rounded-lg hover:bg-slate-100 sm:mb-0 dark:hover:bg-gray-700">
+              <svg class="limda-dark h-7 w-7 fill-gray-500 p-1 dark:fill-gray-800" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+              </svg>
+              <svg class="limda-light h-7 w-7 p-1" class="" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  fill-rule="evenodd" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <div class="md:p-4">
+              <a class="text-md focus:shadow-outline ml-2 flex items-center rounded-lg bg-gray-100 px-4 py-2 font-semibold sm:ml-0 md:ml-2 md:mt-0 dark:bg-gray-800 dark:text-gray-200 dark:hover:bg-gray-700"
+                href="/clientarea.php" target="_blank">
+                <span class="">Account</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd"
+                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                    clip-rule="evenodd" />
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    
+      <!-- Additional Script for Dark and Light Mode-->
+    
+      <script>
+        // icons
+        const sunIcon = document.querySelector(".limda-light")
+        const moonIcon = document.querySelector(".limda-dark")
+    
+        // theme vars
+        const userTheme = localStorage.getItem("theme");
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+        // icon toggle
+        const iconToggle = () => {
+           moonIcon.classList.toggle("display-none");
+           sunIcon.classList.toggle("display-none");
+        }
+    
+        // initial theme check
+        const themeCheck = () => {
+           if (userTheme === "dark" || (!userTheme && systemTheme)) {
+              document.documentElement.classList.add("dark");
+              moonIcon.classList.add("display-none");
+              return;
+           }
+           sunIcon.classList.add("display-none");
+        }
+    
+        // manual theme switch
+        const themeSwitch = () => {
+           if (document.documentElement.classList.contains("dark")) {
+              document.documentElement.classList.remove("dark");
+              localStorage.setItem("theme", "light");
+              iconToggle();
+              return;
+           }
+           document.documentElement.classList.add("dark");
+           localStorage.setItem("theme", "dark");
+           iconToggle();
+        }
+    
+    
+        // call theme switch on clicking button
+        sunIcon.addEventListener("click", () => {
+           themeSwitch();
+        })
+        moonIcon.addEventListener("click", () => {
+           themeSwitch();
+        })
+        // invoke theme check on initial load
+        themeCheck();
+      </script>
+    
+      <!-- End Addition Dark and Light Mode Script -->
+    
+      <!-- Primary Header End -->
+    </body>
+    <!-- Nav Bar End -->
+
+ <style>
+     @media (min-width: 640px) {
+         .sm\:bg-svg-bottom {
+             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='353' height='304'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23D0D5F6' stroke-width='2'%3E%3Cpath d='M180.29 759c102.087-21.62 155.232-61.312 159.437-119.074 6.307-86.643-231.598-17.186-136.358-198 95.241-180.813 181.318-185.29 136.358-298C294.767 31.216 174.04-27.954 33.79 16.8c-93.501 29.836-144.652 140.545-153.453 332.126'/%3E%3Cpath d='M138.3 759c80.083-18.988 121.774-53.846 125.072-104.575 4.948-76.093-181.679-15.094-106.966-173.89C231.118 321.738 298.64 317.808 263.372 218.82c-35.269-98.986-129.974-150.95-239.995-111.646C-49.97 133.378-90.096 230.605-97 398.859'/%3E%3Cpath d='M102.065 761c60.604-16.56 92.153-46.963 94.65-91.208 3.743-66.367-137.488-13.165-80.949-151.664 56.54-138.5 107.638-141.927 80.948-228.261-26.69-86.335-98.359-131.656-181.618-97.376C-40.41 215.345-70.775 300.145-76 446.892'/%3E%3C/g%3E%3C/svg%3E");
+         }
+     }
+
+     .toggle_dot {
+         top: -.25rem;
+         transition: all 0.3s ease-in-out;
+     }
+
+     input:checked~.toggle_dot {
+         transform: translateX(100%);
+         background-color: #0082c8;
+     }
+
+     .bg-gradient {
+         background: #667db6;
+         /* fallback for old browsers */
+         background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+         /* Chrome 10-25, Safari 5.1-6 */
+         background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+         /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+     }
+
+     .bg-gradient-base {
+         background-color: #0082c8;
+     }
+
+     .font-work-sans {
+         font-family: 'Work Sans', sans-serif;
+     }
+
+     .tab-content {
+         display: none;
+     }
+
+     .tab-content.active {
+         display: block;
+     }
+ </style>
+
+
+
+ <!-- About Start -->
+ <div class="max-w-7xl mx-auto px-6 pb-16 pt-8 lg:pt-12 lg:pb-20">
+     <!-- Creacte By Joker Banny -->
+     <div class="sm:flex justify-between items-center">
+         <div class="flex justify-start mx-auto">
+             <div class="sm:py-0 pb-0 sm:pb-5 flex justify-start items-center">
+                 <div class="container mx-auto rounded-lg">
+
+                     <p class="text-md my-6 text-left text-gray-700 dark:text-gray-300 sm:pt-2">
+                         This is OneNetly Privacy Policy. It discusses how we will collect, use, maintain and disclose the information which we will collect from our website visitors and customers. Our privacy policy is part of our contracts. It is incorporated into our TOS and any other contract we have with users.
+                     </p>
+
+                     <h1 class="mt-14 text-left font-bold text-gray-700 dark:text-gray-100 text-3xl">The information we <span class="text-blue-600">collect</span>
+                     </h1>
+                     <p class="text-md my-6 text-left text-gray-700 dark:text-gray-300 sm:pt-2">
+                         When a visitor visits our website, our web server collects basic user information about you, such as your ISP's domain, the time you accessed our Web site, and the pages from within our Web site that you visit. This information is not personally identifiable, except when necessary to prevent fraud or abuse of the system.
+
+                     <p class="text-gray-700 dark:text-gray-300 mb-6"> When a customer order our service we collocted following information:</p>
+
+                     <p class="dark:text-gray-300 mb-6">Traditional contact information such as mailing address, phone number, and fax number. <br>
+                         Internet contact information such as email addresses.<br>
+                         Credit card information.<br>
+                         Information about the user's computer system, such as the web browser type, IP address, and operating system.<br>
+                         Non-financial identification information, such as username and password combinations. </p>
+
+
+                     </p>
+
+
+
+
+                     <h1 class="mt-14 text-left font-bold text-gray-700 dark:text-gray-100 text-3xl">How we use <span class="text-blue-600">information</span>
+                     </h1>
+                     <p class="text-md my-6 text-left text-gray-700 dark:text-gray-300 sm:pt-2">
+                         OneNetly may use personally identifiable information collected through our Web site to contact Users regarding products and services offered by OneNetly and its trusted affiliates, independent contractors and business partners, and otherwise to enhance customers experience with OneNetly and such affiliates, independent contractors and business partners. OneNetly may also use information collected through our Web site for research regarding the effectiveness of the Web site and the marketing, advertising and sales efforts of OneNetly, its trusted affiliates, independent contractors and business partners; for example, to provide you with information about products which might be of interest to you or to enable you to take advantage of special partner programs or OneNetly specials. OneNetly may also use customer information to provide customers with system information or information about new or upgraded products.
+                     </p>
+                     <p class="text-gray-700 dark:text-gray-300 mb-6"> We will not otherwise disclose customer personal and account information unless we have reason to believe that disclosing such information is necessary to identify, make contact with, or bring legal action against someone who may be causing harm or interfering with the rights or property of OneNetly, our customers, or others. We may provide information to regulatory authorities and law enforcement officials in accordance with applicable laws or where OneNetly has a good faith belief that the law requires such disclosure.
+
+
+                     </p>
+
+
+
+
+                     <h1 class="mt-14 text-left font-bold text-gray-700 dark:text-gray-100 text-3xl">Refund <span class="text-blue-600">policy</span>
+                     </h1>
+                     <p class="text-md my-6 text-left text-gray-700 dark:text-gray-300 sm:pt-2">
+                         You can cancel your shared hosting plan for a full refund within the first 30 days. It is applicable (1) if you are experiencing technical difficulties with our server, (2) if a feature that we discussed in the package specification is missing, or (3) if you are experiencing any other server error that we are unable to resolve. If you cancel within 30 days, you will only receive a full refund for your shared hosting service. Because of the one-of-a-kind nature of their costs, most add-on products, such as domains, are not eligible for a money-back guarantee. If you cancel within 30 days of receiving your free domain, OneNetly, Inc will deduct a non-refundable domain name registration fee from your refund.
+                     </p>
+                     <p class="text-gray-700 dark:text-gray-300 mb-6"> OneNetly, Inc does not provide refunds for shared or reseller hosting cancellations after 30 days. Furthermore, change of mind is not permitted within 30 days. There are no partial or full refunds for monthly services such as VPS/Dedicated servers. However, if you have subscribed to any of these services for more than one month, you will receive a full refund for any unused periods. Any special, customized, or temporary packs, such as student packs, are not refundable. There are no refunds for web services such as web design and development, web templates and themes, technical support, and so on.
+
+
+                     </p>
+
+
+                     <h1 class="mt-14 text-left font-bold text-gray-700 dark:text-gray-100 text-3xl">Domain <span class="text-blue-600">management</span>
+                     </h1>
+                     <p class="text-md my-6 text-left text-gray-700 dark:text-gray-300 sm:pt-2">
+                         Appendix A of this Agreement details the features, prices, and other characteristics of the OneNetly, Inc Services you purchase. OneNetly, Inc reviews the features, costs, and other aspects of the Services on a regular basis. OneNetly, Inc may modify these features and rates at any moment and is under no obligation to provide you with these new features and prices. If you accept these additional features and services, they will be incorporated into this Agreement once you start using them or selling them to your customers. Prices on our website are current as of the Effective Date. The prices of OneNetly, Inc or third-party services are not included.
+                     </p>
+
+
+                     <h1 class="mt-14 text-left font-bold text-gray-700 dark:text-gray-100 text-3xl">Changes to our <span class="text-blue-600">privacy policy</span>
+                     </h1>
+                     <p class="text-md my-6 text-left text-gray-700 dark:text-gray-300 sm:pt-2">
+                         We reserve the right to modify our Privacy Policy at any time. We will post those changes on this page so that our customers are always aware of what information we collect, how we use it, and when we share it with others. Please contact us if you believe we are not handling your information in accordance with our privacy policies. If we have violated our privacy policy for any reason, we will correct the error as soon as you notify us.
+                     </p>
+
+
+
+
+                 </div>
+             </div>
+
+         </div>
+
+     </div>
+ </div>
+ <!-- End About -->
+
+ <!-- Footer -->
+
+<!-- Main Footer Start -->
+<div class="bg-gray-900">
+  <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
+    <div class="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
+      <div class="col-span-full lg:col-span-2">
+        <!-- logo - start -->
+        <div class="mb-4 lg:-mt-2">
+          <a href="/" class="inline-flex items-center gap-2 text-xl font-bold text-gray-100 md:text-2xl" aria-label="logo">
+            OneNetly
+          </a>
+        </div>
+        <!-- logo - end -->
+
+        <p class="mb-6 text-gray-400 sm:pr-8">Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!</p>
+        
+      </div>
+
+      <!-- nav - start -->
+      <div>
+        <div class="mb-4 font-bold uppercase tracking-widest text-gray-100">Products</div>
+
+        <nav class="flex flex-col gap-4">
+
+          <div>
+            <a href="https://onenetly.com/index.php?rp=/store/free-hosting" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Free Web Hosting</a>
+          </div>
+
+        </nav>
+      </div>
+      <!-- nav - end -->
+
+      <!-- nav - start -->
+      <div>
+        <div class="mb-4 font-bold uppercase tracking-widest text-gray-100">Domain</div>
+
+        <nav class="flex flex-col gap-4">
+          <div>
+            <a href="https://onenetly.com/cart.php?a=add&domain=register" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Register Domain</a>
+          </div>
+
+          <div>
+            <a href="https://onenetly.com/cart.php?a=add&domain=transfer" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Transfer Domain</a>
+          </div>
+
+          <div>
+            <a href="https://onenetly.com/domain/pricing" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Domain Pricing</a>
+          </div>
+
+        </nav>
+      </div>
+      <!-- nav - end -->
+
+      <!-- nav - start -->
+      <div>
+        <div class="mb-4 font-bold uppercase tracking-widest text-gray-100">Support</div>
+
+        <nav class="flex flex-col gap-4">
+          <div>
+            <a href="https://onenetly.com/index.php?rp=/announcements" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Announcements</a>
+          </div>
+
+          <div>
+            <a href="https://onenetly.com/index.php?rp=/knowledgebase" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Knowledgebase</a>
+          </div>
+          
+          <div>
+            <a href="https://onenetly.com/serverstatus.php" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600"> Network Status</a>
+          </div>
+
+          <div>
+            <a href="https://onenetly.com/submitticket.php?step=2&deptid=1" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Submit Ticket</a>
+          </div>
+
+          <div>
+            <a href="https://onenetly.com/contact.php" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Contact Us</a>
+          </div>
+
+        </nav>
+      </div>
+      <!-- nav - end -->
+
+      <!-- nav - start -->
+      <div>
+        <div class="mb-4 font-bold uppercase tracking-widest text-gray-100">Legal</div>
+
+        <nav class="flex flex-col gap-4">
+          <div>
+            <a href="tos.html" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Terms of Service</a>
+          </div>
+
+          <div>
+            <a href="privacy-policy.html" class="text-gray-400 transition duration-100 hover:text-indigo-500 active:text-indigo-600">Privacy Policy</a>
+          </div>
+        </nav>
+      </div>
+      <!-- nav - end -->
+    </div>
+
+    <div class="border-t border-gray-800 py-8 text-center text-sm text-gray-400">Copyright © 2024 OneNetly, LLC. All Rights Reserved.</div>
+  </footer>
+</div>
+
+<!-- Main Footer End -->
+
+<!-- Additional Javascripts -->
+
+<script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-3.6.1.slim.min.js"></script>
+<script src="js/alpine.min.js" defer></script>
+
+<!-- End Additional Javascripts --> <!-- End Footer -->
+
+
+</body>
+</html>
