@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
-    <link rel="stylesheet" href="css/typography.min.css" />
+    <link rel="stylesheet" href="css/output.css" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
@@ -22,11 +22,7 @@
     <meta property="og:image" content="img/og.jpg" />
 
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
-    <link href="assets/fonts/Inter/inter.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/tailwind.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <script src="js/lazysizes.min.js" async=""></script>
+    <link href="./css/output.css" rel="stylesheet">
 
 
     <!-- Google tag (gtag.js) -->
@@ -43,507 +39,91 @@
     </script>
 
     <!-- End Google tag (gtag.js) -->
-
-    <style>
-        /* Tooltip */
-        @media only screen and (max-width: 600px) {
-            .tooltip .tooltiptext {
-                margin-left: -20px !important;
-            }
-
-            .tooltip .tooltiptext::after {
-                left: 8.70% !important;
-            }
-
-        }
-
-
-        .tooltip {
-            position: relative;
-            cursor: context-menu;
-        }
-
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 230px;
-            background-color: #6b7280;
-            opacity: 1;
-            color: white;
-            font-size: 13px;
-            line-height: 1.3em;
-            font-weight: 400;
-            text-align: center;
-            border-radius: 10px;
-            padding: 10px;
-            position: absolute;
-            z-index: 10;
-            bottom: 150%;
-            left: 50%;
-            margin-left: -115px;
-        }
-
-        .tooltip .tooltiptext::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            margin-left: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: #6b7280 transparent transparent transparent;
-            z-index: 10;
-        }
-
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-        }
-
-        /* End Tooltip*/
-
-
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-
-        /* !important Billed Annually check button*/
-        .toggle-bg:after {
-            background: #fff;
-            border-color: #d1d5db;
-            border-radius: 9999px;
-            border-width: 1px;
-            content: "";
-            height: 1.25rem;
-            left: .125rem;
-            position: absolute;
-            top: .125rem;
-            transition-duration: .15s;
-            width: 1.25rem
-        }
-        .billedAnnuallySwitch::after{
-            top: 0.6rem !important;
-        }
-
-        input:checked+.toggle-bg:after {
-            border-color: #fff;
-            transform: translateX(100%);
-        }
-
-        input:checked+.toggle-bg {
-            background: #1c64f2;
-            border-color: #1c64f2
-        }
-
-        select {
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-            background-image: url(img/arrow-down.svg);
-            background-position: right 0.8rem center;
-            background-repeat: no-repeat;
-            background-size: .6em .6em;
-            padding-right: 2.5rem;
-
-        }
-
-        select {
-            -webkit-appearance: none;
-            appearance: none;
-            -moz-appearance: none;
-            text-indent: 1px;
-            text-overflow: '';
-        }
-
-        .plan-check {
-            width: 17px;
-            min-width: 17px;
-        }
-
-        .toggle-bg:after {
-            background: #fff;
-            border-color: #d1d5db;
-            border-radius: 9999px;
-            border-width: 1px;
-            box-shadow: var(--tw-ring-inset) 0 0 0 calc(var(--tw-ring-offset-width)) var(--tw-ring-color);
-            content: "";
-            height: 1.25rem;
-            left: .125rem;
-            position: absolute;
-            top: .125rem;
-            transition-duration: .15s;
-            transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-            width: 1.25rem
-        }
-    </style>
 </head>
 <!-- Head Template End -->
-
-<!-- Set currency at the localStorage based on the user location -->
-<script>
-    let currency = localStorage.getItem("currency");
-    if(!currency){
-        localStorage.setItem('currency', 'USD');currency = "USD";    };
-</script>
 
 
     <!-- Nav Bar Start -->
     <!-- Primary Header Start -->
 
-   <body>
-  <div
-    class="sticky top-0 z-50 w-full border-b border-transparent bg-white text-gray-700 shadow max-lg:max-h-screen max-lg:overflow-y-auto">
-    <div x-data="{ open: false }"
-      class="mx-auto flex max-w-screen-xl flex-col px-2 py-2 lg:flex-row lg:items-center lg:justify-between">
-      <div class="flex flex-row items-center justify-between p-4">
-        <a href="/"> <img class="h-auto w-48" src="/img/header/logo.png" alt="OneNetly Logo" /> </a>
-        <button class="focus:shadow-outline rounded-lg focus:outline-none lg:hidden" @click="open = !open">
-          <svg fill="currentColor" viewBox="0 0 20 20" class="h-6 w-6">
-            <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-            <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" style="display: none;"></path>
-          </svg>
-        </button>
-      </div>
-      <!-- For Phone -->
-      <nav :class="{'flex': open, 'hidden': !open}"
-        class="ml-0 hidden flex-auto flex-col px-5 pt-5 lg:ml-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
-        <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent"
-          href="/">Home</a>
-
-        <!-- Free Web Hosting -->
-        <div class="relative mt-2 rounded-lg bg-gray-100 p-3 lg:my-0 lg:mt-0 lg:rounded-none lg:bg-transparent lg:p-0">
-          <button @click="open = !open" class="text-md focus:shadow-outline flex w-full flex-row items-center justify-between rounded-lg bg-gray-100 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mb-0 lg:inline-block lg:w-auto lg:bg-transparent lg:px-4 lg:py-3">
-            <span>Free Web Hosting</span>
+    <div class="sticky top-0 z-50 w-full border-b border-transparent bg-white text-gray-700 shadow max-lg:max-h-screen max-lg:overflow-y-auto">
+      <div x-data="{ open: false }"
+        class="mx-auto flex max-w-screen-xl flex-col px-2 py-2 lg:flex-row lg:items-center lg:justify-between">
+        <div class="flex flex-row items-center justify-between p-4">
+          <a href="/"> <img class="h-auto w-48" src="/img/header/logo.png" alt="OneNetly Logo" /> </a>
+          <button class="focus:shadow-outline rounded-lg focus:outline-none lg:hidden" @click="open = !open">
+            <svg fill="currentColor" viewBox="0 0 20 20" class="h-6 w-6">
+              <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+              <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" style="display: none;"></path>
+            </svg>
           </button>
         </div>
-        <!-- END Web Hosting -->
-
-        <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent"
-          href="https://ap.onenetly.com/cart.php?a=add&domain=register">Domains</a>
+        <!-- For Phone -->
+        <nav :class="{'flex': open, 'hidden': !open}"
+          class="ml-0 hidden flex-auto flex-col px-5 pt-5 lg:ml-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
+          <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent"
+            href="/">Home</a>
+  
+          <!-- Free Web Hosting -->
+          <div class="relative mt-2 rounded-lg bg-gray-100 p-3 lg:my-0 lg:mt-0 lg:rounded-none lg:bg-transparent lg:p-0">
+            <a href ="https://ap.onenetly.com/index.php?rp=/store/free-hosting"><button @click="open = !open" class="text-md focus:shadow-outline flex w-full flex-row items-center justify-between rounded-lg bg-gray-100 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mb-0 lg:inline-block lg:w-auto lg:bg-transparent lg:px-4 lg:py-3">
+              <span>Free Web Hosting</span>
+            </button></a>
+          </div>
+          <!-- END Web Hosting -->
+  
+          <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent"
+            href="https://ap.onenetly.com/cart.php?a=add&domain=register">Domains</a>
+  
+            <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent"
+            href="https://forum.onenetly.com">Forum</a>
+            
+        </nav>
+        <!-- For desktop -->
+        <nav :class="{'flex': open, 'hidden': !open}"
+          class="mt-6 hidden flex-auto items-center justify-between px-5 pb-10 sm:flex-row sm:items-center lg:mt-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
           
-      </nav>
-      <!-- For desktop -->
-      <nav :class="{'flex': open, 'hidden': !open}"
-        class="mt-6 hidden flex-auto items-center justify-between px-5 pb-10 sm:flex-row sm:items-center lg:mt-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
-          
-        <div class="md:p-4">
-          <a class="text-md focus:shadow-outline ml-2 flex items-center rounded-lg bg-gray-100 px-4 py-2 font-semibold sm:ml-0 md:ml-2 md:mt-0"
-            href="https://ap.onenetly.com/clientarea.php" target="_blank">
-            <span class="">Account</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
-                clip-rule="evenodd" />
-            </svg>
-          </a>
-        </div>
-      </nav>
+          <div class="md:p-4">
+            <a class="text-md focus:shadow-outline ml-2 flex items-center rounded-lg bg-gray-100 px-4 py-2 font-semibold sm:ml-0 md:ml-2 md:mt-0"
+              href="https://ap.onenetly.com/clientarea.php" target="_blank">
+              <span class="">Account</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z"
+                  clip-rule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
 
   <!-- Primary Header End -->
 </body>
-    <!-- Nav Bar End -->
 
+    <div class="max-w-4xl mx-auto px-4 py-8">
 
- <style>
- 	@media (min-width: 640px) {
- 		.sm\:bg-svg-bottom {
- 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='353' height='304'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23D0D5F6' stroke-width='2'%3E%3Cpath d='M180.29 759c102.087-21.62 155.232-61.312 159.437-119.074 6.307-86.643-231.598-17.186-136.358-198 95.241-180.813 181.318-185.29 136.358-298C294.767 31.216 174.04-27.954 33.79 16.8c-93.501 29.836-144.652 140.545-153.453 332.126'/%3E%3Cpath d='M138.3 759c80.083-18.988 121.774-53.846 125.072-104.575 4.948-76.093-181.679-15.094-106.966-173.89C231.118 321.738 298.64 317.808 263.372 218.82c-35.269-98.986-129.974-150.95-239.995-111.646C-49.97 133.378-90.096 230.605-97 398.859'/%3E%3Cpath d='M102.065 761c60.604-16.56 92.153-46.963 94.65-91.208 3.743-66.367-137.488-13.165-80.949-151.664 56.54-138.5 107.638-141.927 80.948-228.261-26.69-86.335-98.359-131.656-181.618-97.376C-40.41 215.345-70.775 300.145-76 446.892'/%3E%3C/g%3E%3C/svg%3E");
- 		}
- 	}
+      <p class="mb-4">Welcome to OneNetly! These terms and conditions outline the rules and regulations for the use of OneNetly's Website, located at https://onenetly.com.</p>
 
- 	.toggle_dot {
- 		top: -.25rem;
- 		transition: all 0.3s ease-in-out;
- 	}
+      <p class="mb-4">By accessing this website, we assume you accept these terms and conditions. Do not continue to use OneNetly if you do not agree to take all of the terms and conditions stated on this page.</p>
 
- 	input:checked~.toggle_dot {
- 		transform: translateX(100%);
- 		background-color: #0082c8;
- 	}
+      <p class="mb-4">We do not allow the hosting of adult, phishing, or other illegal content on our platform. Violation of these terms may result in the suspension or termination of your account.</p>
 
- 	.bg-gradient {
- 		background: #667db6;
- 		/* fallback for old browsers */
- 		background: -webkit-linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
- 		/* Chrome 10-25, Safari 5.1-6 */
- 		background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
- 		/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
- 	}
+      <h2 class="text-xl font-semibold mt-6 mb-2">1. Content</h2>
+      <p class="mb-4">You are solely responsible for the content hosted on your website. You must not upload, post, or transmit any content that violates the laws of your jurisdiction or infringes upon the rights of others.</p>
 
- 	.bg-gradient-base {
- 		background-color: #0082c8;
- 	}
+      <h2 class="text-xl font-semibold mt-6 mb-2">2. Account</h2>
+      <p class="mb-4">You must provide accurate and complete information when creating an account with OneNetly. You are responsible for maintaining the security of your account credentials.</p>
 
- 	.font-work-sans {
- 		font-family: 'Work Sans', sans-serif;
- 	}
+      <h2 class="text-xl font-semibold mt-6 mb-2">3. Suspension and Termination</h2>
+      <p class="mb-4">OneNetly reserves the right to suspend or terminate your account at any time, with or without cause, and without notice.</p>
 
- 	.tab-content {
- 		display: none;
- 	}
+      <h2 class="text-xl font-semibold mt-6 mb-2">4. Governing Law</h2>
+      <p class="mb-4">These terms and conditions are governed by and construed in accordance with the laws of [Your Jurisdiction] and you irrevocably submit to the exclusive jurisdiction of the courts in that jurisdiction.</p>
 
- 	.tab-content.active {
- 		display: block;
- 	}
- </style>
-
-
- <!-- About Start -->
- <div class=" prose lg:prose-md max-w-7xl mx-auto px-6 py-0 pb-20 pt-14 lg:pt-16 lg:pb-32">
- 	<article class="">
- 		OneNetly owns all editorial content and graphics on this site. OneNetly provides web services to subscribers all over the world, and all customers must abide by the following Terms and Conditions of Service. The terms of service listed below are intended to give the greatest level of service possible.
-
- 		This OneNetly Terms Of Service agreement (hereinafter referred to as the "TOS") establishes the terms and conditions under which OneNetly's Services (hereinafter referred to as the "Services") will be delivered to you following your registration. You attest to the fact that you are at least 18 years old. The TOS clearly outlines what is and is not permitted to be done with the Services. This TOS is not exhaustive, and OneNetly maintains the right to change it at any time, with notice published at OneNetly. No employee's of OneNetly verbal or written agreement/statement, or anything on the OneNetly website, will take precedence over the TOS. The Customer agrees to all of the terms and conditions of the TOS, as changed from time to time, in their entirety by registering for and using any of OneNetly Services. Customer is accountable for his or her Clients if he or she resells or represents the Services for which he or she is paying. Only the Customer who is paying for the Services is recognized by OneNetly, not his or her clients. Violation of the TOS or any other activity deemed inappropriate by OneNetly may result in the Customer's Services being terminated or suspended. <br>
- 		<h2>Service Delivery Time</h2>
- 		We provide our service instantly by sending an email to your registered email address and granting access to your OneNetly dashboard. The entire process is automated. However, if the automation fails for any reason, it may take up to 24 hours to deliver the service.<br>
- 		<h2>New Accounts</h2>
- 		We'll set up your account once we've received payment and screened the order(s) for fraud by ourselves and/or our payment partner(s). You have to supply us with an email address that is not @ the domain(s) under which you are registering. If there is ever an issue with abuse or we need to contact you, we will use the primary email address on file. You must keep the email address on file up to date and current at all times. You must ensure that the contact information for your domain account and your actual domain name(s) are valid and up-to-date if you have a domain name registered with OneNetly. OneNetly is not responsible for a lapsed registration caused by the domain being paired with outdated contact information. If you need to double-check or alter this information, go to your clients' section and make the changes yourself. Your account may be terminated if you provide fraudulent contact information of any type. Within 3 days of establishing your account with OneNetly, you will be required to present government-issued identification (Passport/National ID/Driving License, etc.) and proof of address (Utility Bill) for any service purchased from OneNetly. If you don't meet these standards, your order may be flagged as fraudulent and refused. New account setup may be delayed due to unanticipated challenges with numerous mail servers and any connection problems between your ISP and OneNetly operating office. <br>
- 		<h2>Transfers</h2>
- 		Our migration staff will do all possible to assist you in moving your site to us. However, our migration team provides transfers as a best-effort service, and we cannot guarantee the availability, possibility, or time required to execute an account transfer. Each hosting firm is set up differently, and some hosting platforms save data in an incompatible or proprietary format, making migration of some or all account data exceedingly difficult, if not impossible. We will do our utmost to help you move data from a previous host, but we may not be able to do so in some situations. The free transfer services are accessible for a period of three (3) days after you sign up.<br>
- 		<h2>Satisfaction Guaranteed</h2>
- 		Only the Web Hosting service is covered by a 30-day guarantee. If you are dissatisfied with t services for any reason during the first 30 days of service (Only Web Hosting), you may request that your services be terminated in writing via email or our cancellation form (see below), and you will receive a full refund*. You must also give a specific explanation for your cancellation (as we request any cancellation, no matter the time frame). We are the only arbitrator of whether your reason is valid and if you and we both took all reasonable steps to correct the problem that caused the interest to be canceled. If the client has broken the conditions of the agreement.
- 		<br><br>
- 		<b>*Domain Registration/renew/transfer or SSL etc. +Processing fee will apply…</b> <br>
- 		<h2>Payments</h2>
- 		When you subscribe to our services, you are signing up for a pre-paid service, and all ITES (domain registration, web hosting, SSL, and so on) services are subject to 5% VAT, or 5% VAT and 2% sales tax for web development services. All past-due invoices can be paid online with bKash, or PayPal, as well as via bank transfer or walk-in payment at our operation office. Except for payments made through our offline method, all online payments are subject to a payment gateway fee, which will be added automatically when you select payment options in your Clients Area &gt; Invoice. From 30 to 1 day before the renewal date, renewal notices are sent numerous times through email. bKash, PayPal, Bank Transfer, and Walk-in-Payment are the only methods of payment we accept at our operation office. If your yearly charge is declined and we are unable to contact you, the late fees to authorize your account will apply. Any questions about payment should be directed to the OneNetly support forum.
-
- 		We shall take the following steps if a shared/reseller/VPS/Dedicated/Email Server/Spam Filtering/File Hosting, etc. account has a past due invoice.
- 		<ul>
- 			<li style="font-weight: 400;" aria-level="1">1 Day – No Action Taken</li>
- 			<li style="font-weight: 400;" aria-level="1">2 Days – Accounts are suspended</li>
- 			<li style="font-weight: 400;" aria-level="1">7 Days – Late Fee Added</li>
- 			<li style="font-weight: 400;" aria-level="1">15 Days – Accounts will be terminated</li>
- 		</ul>
- 		<h2>Cancellations</h2>
- 		You must write to sales or request a Cancellation from your clients' area if you wish to cancel your services. <br>
- 		<h2>Overage Charges</h2>
- 		Given our customers' needs, our service plans are designed to accommodate the majority of usage scenarios. Your consumption, however, may differ and necessitate more resources, particularly in the areas of storage and traffic. If your account requires more resources, we will never charge your card automatically. You must keep your cPanel email address up to date so that you can receive an email when your account reaches specific limits set entirely by our system, at which point you can contact us to upgrade your account's transfer quota. If your allotments are exceeded and you do not contact us, the system will suspend your site. <br>
- 		<h2>Refunds/Accounts Termination</h2>
- 		If OneNetly fails to provide said services for whatever reason, a prorated refund will be granted. If OneNetly is forced to suspend or terminate your services due to a violation of our stated policies, no refunds will be given. If you request account cancellation, your account will be suspended from us once your service has been canceled. Within 30 days, it will be erased. If your account is suspended for any other reason and continues suspended for more than 10 days, it will be erased. If a customer has multiple accounts with OneNetly, OneNetly reserves the right to suspend all of the accounts if one or more accounts are not paid until all of the payments are made.
- 		<ul>
- 			<li style="font-weight: 400;" aria-level="1">If you are discovered to be in breach of our terms and conditions, there will be no refund.</li>
- 			<li style="font-weight: 400;" aria-level="1">If you use our service for the second time, there will be no refund. It is only given to a buyer once for any product…</li>
- 		</ul>
- 		<h2>Content</h2>
- 		All OneNetly services must be used for legitimate purposes only. Any information, data, or content that is sent, stored, or presented in violation of any Bangladesh Government local legislation is banned. This includes copyrighted information, material we deem to be threatening or obscene, material that threatens national security, and material protected by trade secrets or other laws, among other things. The subscriber agrees to indemnify and keep OneNetly harmless from any claims arising out of the subscriber's use of OneNetly services that hurt the subscriber or anyone else.
-
- 		OneNetly believes in free expression; nevertheless, any content (written, visual, or inferred) in the following categories will not be creed, or religious beliefs; vulgarity or filthy language directed at anybody other than oneself; any violent or malicious content. We prefer that you manage your material and are in charge of what your website offers. We don't have the resources or time to regularly monitor and manage our servers, which contain constantly <br>
- 		<h2>Content or links that are forbidden include (but are not limited to):</h2>
- 		<li style="font-weight: 400;" aria-level="1">IRC Scripts/Bots</li>
- 		<li style="font-weight: 400;" aria-level="1">Proxy Scripts/Anonymizers</li>
- 		<li style="font-weight: 400;" aria-level="1">Pirated Software/Warez</li>
- 		<li style="font-weight: 400;" aria-level="1">Image Hosting Scripts (similar to Photobucket or Tinypic)</li>
- 		<li style="font-weight: 400;" aria-level="1">AutoSurf/PTC/PTS/PPC sites</li>
- 		<li style="font-weight: 400;" aria-level="1">IP Scanners</li>
- 		<li style="font-weight: 400;" aria-level="1">Bruteforce Programs/Scripts/Applications</li>
- 		<li style="font-weight: 400;" aria-level="1">Mail Bombers/Spam Scripts</li>
- 		<li style="font-weight: 400;" aria-level="1">Banner-Ad services (commercial banner ad rotation)</li>
- 		<li style="font-weight: 400;" aria-level="1">File Dump/Mirror Scripts (similar to Rapidshare)</li>
- 		<li style="font-weight: 400;" aria-level="1">Commercial Audio Streaming (more than one or two streams)</li>
- 		<li style="font-weight: 400;" aria-level="1">Escrow/Bank Debentures</li>
- 		<li style="font-weight: 400;" aria-level="1">High-Yield Interest Programs (HYIP) or Related Sites</li>
- 		<li style="font-weight: 400;" aria-level="1">Investment Sites (FOREX, E-Gold Exchange, Second Life/Linden Exchange, Ponzi, MLM/Pyramid Scheme)</li>
- 		<li style="font-weight: 400;" aria-level="1">Sale of any controlled substance without prior proof of appropriate permit(s)</li>
- 		<li style="font-weight: 400;" aria-level="1">Prime Banks Programs</li>
- 		<li style="font-weight: 400;" aria-level="1">Lottery Sites</li>
- 		<li style="font-weight: 400;" aria-level="1">MUDs/RPGs/PBBGs</li>
- 		<li style="font-weight: 400;" aria-level="1">Hateful/Racist/Harassment oriented sites</li>
- 		<li style="font-weight: 400;" aria-level="1">Hacker focused sites/archives/programs</li>
- 		<li style="font-weight: 400;" aria-level="1">Sites promoting illegal activities</li>
- 		<li style="font-weight: 400;" aria-level="1">Forums and/or websites that distribute or link to warez/pirated/illegal content</li>
- 		<li style="font-weight: 400;" aria-level="1">Bank Debentures/Bank Debenture Trading Programs</li>
- 		<li style="font-weight: 400;" aria-level="1">Fraudulent Sites (Including, but not limited to sites listed at aa419.org &amp; escrow-fraud.com)</li>
- 		<li style="font-weight: 400;" aria-level="1">Mailer Pro</li>
- 		</ul>
- 		<h3>On all our dedicated servers and colocation services, examples of banned content include:</h3>
- 		<ul>
- 			<li style="font-weight: 400;" aria-level="1">IRCD (IRC servers)</li>
- 			<li style="font-weight: 400;" aria-level="1">IRC Scripts/Bots</li>
- 			<li style="font-weight: 400;" aria-level="1">Pirated Software/Warez</li>
- 			<li style="font-weight: 400;" aria-level="1">IP Scanners</li>
- 			<li style="font-weight: 400;" aria-level="1">Bruteforce Programs/Scripts/Applications</li>
- 			<li style="font-weight: 400;" aria-level="1">Mail Bombers/Spam Scripts</li>
- 			<li style="font-weight: 400;" aria-level="1">Escrow</li>
- 			<li style="font-weight: 400;" aria-level="1">High-Yield Interest Programs (HYIP) or Related Sites</li>
- 			<li style="font-weight: 400;" aria-level="1">Investment Sites (FOREX, E-Gold Exchange, Second Life/Linden Exchange, Ponzi, MLM/Pyramid Scheme)</li>
- 			<li style="font-weight: 400;" aria-level="1">Sale of any controlled substance without prior proof of appropriate permit(s)</li>
- 			<li style="font-weight: 400;" aria-level="1">Prime Banks Programs</li>
- 			<li style="font-weight: 400;" aria-level="1">Lottery Sites</li>
- 			<li style="font-weight: 400;" aria-level="1">Hateful/Racist/Harassment oriented sites</li>
- 			<li style="font-weight: 400;" aria-level="1">Hacker focused sites/archives/programs</li>
- 			<li style="font-weight: 400;" aria-level="1">Sites promoting illegal activities</li>
- 			<li style="font-weight: 400;" aria-level="1">Forums and/or websites that distribute or link to warez/pirated/illegal content</li>
- 			<li style="font-weight: 400;" aria-level="1">Bank Debentures/Bank Debenture Trading Programs</li>
- 			<li style="font-weight: 400;" aria-level="1">Fraudulent Sites (Including, but not limited to sites listed at aa419.org &amp; escrow-fraud.com)</li>
- 			<li style="font-weight: 400;" aria-level="1">Mailer Pro</li>
- 		</ul>
- 		It is not permissible to use any OneNetly shared web hosting account as a backup/storage (files/database dump/file sharing media, etc.) device. OneNetly shared web hosting accounts are not intended for the distribution and/or storage of large amounts of data. A shared web hosting account is exclusively for the storage of websites, not for remote file storage. If we discover a shared web hosting account involved in such storing activity, it will be considered a violation of the OneNetly TOS, and the account will be suspended or terminated immediately. The VPS/Dedicated Server plans, on the other hand, do not have any limitations in terms of backup/storage.
-
- 		Any website that uses more than 70% of its total disk space to store files, either in terms of overall size or number of files, is considered to be using an unusual amount of files. You will be notified if we discover that the files are unlawful or harmful in any manner. If you do not intend to harm our server or others with the files you maintain, you have nothing to be concerned about.
-
- 		OneNetly services, including all related equipment, networks, and network devices, are only available to customers who have been granted permission. OneNetly systems may be monitored for any lawful reason, including ensuring that use is authorized, system administration, facilitating unauthorized access protection, and verifying security protocols, survivability, and operational security. Information may be viewed, recorded, copied, and used for allowed purposes during monitoring. By using the OneNetly system(s), you agree to be monitored for these purposes.
-
- 		Any account discovered connecting to a third-party network or system without the third party's permission will be suspended. Access to networks or systems that are not under your direct control requires the third party's clear written agreement. OneNetly may request and require documentation to confirm that access to a third-party network or system is approved, at its discretion.
-
- 		We reserve the right to deny service to anybody for any reason. Any material that, in our opinion, is obscene, threatening, illegal, or violates our terms of service in any way may be removed (or otherwise disabled) from our servers, with or without notice.
-
- 		If you do not answer our abuse department's email within 48 hours, your services may be suspended or terminated. All abuse issues must be reported via trouble ticket or email, and a response will be provided within 48 hours.
-
- 		Potential harm to kids, including but not limited to child pornography or content thought to be child pornography, is prohibited: Any site that is found to be hosting or connecting to child pornography will be suspended immediately and without warning.
-
- 		Resellers: We will suspend the affected site and contact you so that you can cancel the account. We will continue to monitor your activity; multiple infractions of this nature may result in your account being immediately terminated.
-
- 		Direct customers: Your services will be canceled with or without notice. <br>
- 		<h2>Opt-in Email Marketing</h2>
- 		If you choose to engage in marketing your site and/or services via email please heed the following. The only permitted form of email marketing is that in which the list is accepted. By definition, opt-in is where people provide you with their email address specifically requesting to be on your email list for information about your site and/or service. If we find your account transmitting email to persons that did not authorize such activity, that is grounds to suspend and terminate your site. Note: On the flip side, the joining of an opt-in email list does not guarantee the legitimacy of such a list. Please contact us before taking any steps so that you will not be a victim of spam from second and third parties of such lists. <br>
- 		<h2>Zero Tolerance Spam Policy</h2>
- 		Unsolicited commercial email (UCE) and unsolicited bulk email (UBE), also known as spam mail, are not tolerated at OneNetly. Spam is defined as follows:
-
- 		If an electronic message meets the following criteria, it is considered spam mail:
-
- 		1) the recipient's identity and context are irrelevant because the message is equally applicable to many other potential recipients; AND (2) the recipient has not verifiably granted deliberate, explicit, and still-revocable permission for the message to be sent; AND (3) the transmission and reception of the message appears to the recipient to benefit the sender disproportionately.
-
- 		If you send an email to someone who hasn't specifically asked to receive it, you'll be charged with UCE/UBE Abuse. It makes no difference where the email was sent from. Any OneNetly customer who engages in this conduct will have their service suspended if abuse is confirmed. Spam not only puts a strain on the server, lowering its uptime and performance, but it also puts the server at risk of being blacklisted. <br>
- 		<h2>This is a checklist of things you must accomplish if your site will be sending out mailings to subscribers:</h2>
- 		You must not attempt to conceal, forge, or misrepresent the sender of the e-mail or the re-sending mail's site.
-
- 		Bulk mailings must explain how the recipients' email addresses were obtained, as well as the frequency with which they were sent.
-
- 		Unsubscribe procedures should be easy and evident in bulk mailings. This should be in the form of a working link to a one-click unsubscribe system, although a genuine address can also be used.
- 		<ul>
- 			<li style="font-weight: 400;" aria-level="1">In the content of all subscription-based e-mails, they must contain legitimate, non-electronic contact information for the sending organization, such as a phone number or physical mailing address.</li>
- 			<li style="font-weight: 400;" aria-level="1">All bulk emails must be solicited, which means the sender has an established and verifiable relationship with the e-mail recipient and the recipient has not requested to be removed from the sender's mailing list. Upon request, documentation of the sender's and recipient's relationship must be made available to AOL.</li>
- 			<li style="font-weight: 400;" aria-level="1">Unsolicited Bulk Email is a practice of sending unsolicited emails to a large number of people. It is forbidden to send any type of unsolicited bulk email over OneNetly servers. It is also forbidden to transmit UBE from another service provider advertising a website, email address, or any other resource housed on OneNetly servers. When communications transmitted from another Internet Service Provider violate this Policy or the other provider's, OneNetly accounts or services may not be utilized to solicit customers from, or collect replies to, those messages.</li>
- 			<li style="font-weight: 400;" aria-level="1">Unconfirmed Mailing Lists are being used. It is against the law to add email addresses to any mailing list without the owner's clear and verifiable authorization. Closed-loop mailing lists must be used by OneNetly customers. Each address owner's subscription confirmation message must be retained on file for the life of the mailing list's existence. It is forbidden to purchase email address lists from third parties for mailing from any OneNetly-hosted website or to refer to any OneNetly account.</li>
- 			<li style="font-weight: 400;" aria-level="1">Operating an account on behalf of, or in connection with, persons or firms listed in the Spamhaus Register of Known Spam Operations (ROKSO) database at www.spamhaus.org, or reselling any service to them.</li>
- 		</ul>
- 		<h2>Script Usage Policy</h2>
- 		OneNetly offers Web Hosting accounts with the ability to run CGI scripts, PHP scripts, and other executable programs. Because these scripts consume significantly more system resources than regular HTML pages, certain limitations must be imposed on their use. We regret that we are often unable to ascertain which script or application is causing the system resource overflow. In the vast majority of cases, we can pinpoint the offending account on the system. The following rules apply to all of the above-mentioned "active content" files:
- 		<ul>
- 			<li style="font-weight: 400;" aria-level="1">The script should only consume a little number of system resources. Scripts that use a significant amount of our RAM or processing will be suspended immediately until the owner is notified and an alternate solution is found.</li>
- 			<li style="font-weight: 400;" aria-level="1">At any given time, no user account may use more than 20% of system resources. If an account uses 20% or more of the system's resources regularly, the account holder will be notified, and if no action is made, the account will be stopped.</li>
- 			<li style="font-weight: 400;" aria-level="1">There is no guarantee that the scripts will interact with any server setup or hardware. Accounts that run these scripts will be terminated without warning and a refund.</li>
- 			<li style="font-weight: 400;" aria-level="1">The script cannot be referenced or used on any other site that is not hosted by OneNetly.</li>
- 			<li style="font-weight: 400;" aria-level="1">The script has to run promptly. Any script that spends more than a few milliseconds on the processor will be removed.</li>
- 			<li style="font-weight: 400;" aria-level="1">Any script that appears to be designed specifically to attack or otherwise maliciously affect the server is completely unacceptable, and if such scripts are discovered in your account, your account will be immediately terminated, and your actions will be reported to the appropriate local, state, and federal authorities, with legal action taken to prosecute the account holder to the fullest extent of the law</li>
- 			<li style="font-weight: 400;" aria-level="1">Chat room scripts written in Perl are strictly forbidden.</li>
- 			<li style="font-weight: 400;" aria-level="1">Only our high-end accounts will be able to run scripts that require a lot of bandwidth, such as non-Perl chat room scripts or banner rotation scripts.</li>
- 			<li style="font-weight: 400;" aria-level="1">Scripts must be kept secure. This regulation prohibits unnecessarily chmoding scripts to 777. This guideline also prohibits keeping scripts in a publicly accessible directory (one without an index.html file).</li>
- 			<li style="font-weight: 400;" aria-level="1">You entirely must ensure the security of your website script. OneNetly will not be held liable for any losses incurred by your account as a result of a script leak or backdoor.</li>
- 		</ul>
-
- 		NOTE: If a script will not run with permission other than 777 (which is uncommon), you can contact customer service for approval, which will be granted in most cases.
-
- 		Any accounts with scripts discovered to violate these policies will have their CGI, Perl, CFM, ASP, and PHP scripts scrutinized by our System Administrators in the future. If a script is deemed to be damaging to the system, it will be terminated at once, and the account will be locked down until the account owners are informed. Accounts with malicious scripts will be terminated immediately, with no reimbursement of any pre-paid fees. <br>
- 		<h2>Resource Usage Policy</h2>
- 		<ol start="12">
- 			<li><b>12</b><b>. a) Server Resource Abuse Policy(SRAP)</b></li>
- 		</ol>
- 		Any website on our shared servers that consumes a lot of server resources (CPU, memory, and network bandwidth) will be offered the chance to upgrade to a dedicated server. Abuse and misappropriation of system resources is a significant issue that OneNetly will not tolerate. Because accounts on a shared server must share resources with other users, we must limit how much CPU and RAM each account can utilize.
-
- 		In all fairness, we cannot allow one or two clients to consume all system resources on a shared machine, causing all other customers to suffer. Excessive CPU and memory utilization by one or more clients result in excessive sluggishness in all areas, including MySQL, Email, HTTP, and others. If a few clients' CPU and memory consumption get out of hand, all sites hosted on the computer will produce problems and become inaccessible.
-
- 		<b>LIMITS ON SERVER RESOURCES ON AVERAGE</b>
- 		<ul>
- 			<li style="font-weight: 400;" aria-level="1">Per account, file, or application, memory use cannot exceed 10%.</li>
- 			<li style="font-weight: 400;" aria-level="1">The CPU use varies by shared hosting plan, which can be viewed on the plan details page.</li>
- 			<li style="font-weight: 400;" aria-level="1">The number of Apache connections is limited to 30.</li>
- 			<li style="font-weight: 400;" aria-level="1">Per domain, 15 MySQL maximum user connections permitted 250 emails per hour.</li>
- 			<li style="font-weight: 400;" aria-level="1">At any moment on the server, run stand-alone, unattended server-side processes. This contains all daemons, including IRCD.</li>
- 			<li style="font-weight: 400;" aria-level="1">On shared servers, you can run any form of web spider or indexer (including Google Cash / AdSpy).</li>
- 			<li style="font-weight: 400;" aria-level="1">Any software that connects to an IRC (Internet Relay Chat) network can be used.</li>
- 			<li style="font-weight: 400;" aria-level="1">Run any BitTorrent client, tracker, or application. You are permitted to link to legal torrents hosted elsewhere, but you are not permitted to host or store them on our shared servers.</li>
- 			<li style="font-weight: 400;" aria-level="1">Take part in whatever file-sharing or peer-to-peer activity you can think of.</li>
- 			<li style="font-weight: 400;" aria-level="1">Run whatever game server you want, such as Counter-Strike, Half-Life, Battlefield 1942, and so on.</li>
- 			<li style="font-weight: 400;" aria-level="1">Run cron entries with less than 15-minute intervals.</li>
- 		</ul>
- 		<ol start="12">
- 			<li><b> b) Illegal Usage</b></li>
- 		</ol>
- 		OneNetly servers are intended to be used for legal purposes. Any information, data, or material that is sent, stored, or distributed in contravention of any applicable law or regulation is forbidden. This includes, but is not limited to, copyrighted information, trademarks, trade secrets, and other intellectual property rights that have been utilized without permission, as well as anything obscene, libelous, poses an illegal threat, or violates export control rules. Pirated software, hacker programs or archives, Warez sites, MP3, and IRC bots are all examples of unacceptable content or connections. Any forum or discussion board that discusses where to obtain such files or distribute them is also illegal. The OneNetly service subscriber agrees to indemnify and keep OneNetly harmless from any claims arising from the subscriber's or any other party's usage of the service. The sole adjudicator of what constitutes a violation of this condition will be OneNetly.
- 		<ol start="12">
- 			<li><b> c) Illegal Content</b></li>
- 		</ol>
- 		OneNetly does not allow background Daemons such as IRC bots; eggdrop; BitchX; XiRCON; and any other program that interferes with normal server operation. No warez is allowed. The use of web proxies is not permitted. NPH-Proxy and web proxy are examples of this. If any proxy files are discovered on your site, your account will be suspended, and the account holder will be charged a USD 50 cost. You are not permitted to run any servers or services on the OneNetly network when using a shell account. Perlbots, proxies, BitchX, psyBnc, root exploits, DDoS programs, Shoutcast servers, and other servers are examples of servers. Running any of these will result in an instant suspension and a fine of no less than USD 50.00 and no more than USD 100.00 for users. For these behaviors, OneNetly maintains the right to terminate an account.
-
- 		<b>12.d) Software Distribution</b>
-
- 		Software and multimedia items are not permitted to be distributed using OneNetly web hosting accounts. Please contact our sales department for specific arrangements if you desire to distribute software and/or multimedia materials.
- 		<ol start="12">
- 			<li><b> e) Liabilities</b></li>
- 		</ol>
- 		OneNetly makes no representations, claims, or assurances about the services provided by our clients, and will not be held liable for any disputes or claims brought against them. OneNetly will not be liable for any direct, indirect, incidental, consequential, special, or exemplary damages, or any other damages, resulting from the use or performance of this website, or any information, services, or goods offered via your website. We are not liable for any content on any of our network's servers, and we will not take action against any dubious material or action until it is brought to our attention via email.
- 		<ol start="12">
- 			<li><b> f) IP Address Ownership</b></li>
- 		</ol>
- 		All IP numbers and addresses that OneNetly may assign to you will be maintained and controlled by OneNetly. OneNetly maintains the right to change or remove any of these IP numbers or addresses at any time.
- 		<ol start="12">
- 			<li><b> g) Security</b></li>
- 		</ol>
- 		It is forbidden for users to violate or attempt to violate the OneNetly Network's security. System or network security violations may result in legal or criminal responsibility. OneNetly will examine any incidents, which may include working with law enforcement authorities to prosecute violators. These infractions include, but are not limited to:
- 		<ul>
- 			<li style="font-weight: 400;" aria-level="1">Accessing material that is not meant for the user or connecting onto a server or account that the user is not authorized to access</li>
- 			<li style="font-weight: 400;" aria-level="1">Attempting to probe, scan, or test a system's or network's vulnerability, or to circumvent security or authentication mechanisms without proper authorization.</li>
- 			<li style="font-weight: 400;" aria-level="1">Attempting to disrupt service to any user, host, or network, including, but not limited to, overloading, ping flooding, mail bombing, and other methods.</li>
- 			<li style="font-weight: 400;" aria-level="1">In any e-mail or forum posting, forging any TCP/IP packet header or any part of the header information</li>
- 			<li style="font-weight: 400;" aria-level="1">Taking any action to gain services to which the User is not entitled.</li>
- 			<li style="font-weight: 400;" aria-level="1">Attempting to combine many hosting packages to take advantage of large amounts of space or bandwidth.</li>
- 		</ul>
- 		Each hosting package paid is exclusive to a single main domain and use - you cannot mix bandwidth and space by purchasing numerous plans. Such transactions will be stopped and labeled as misleading by OneNetly. All of our services have an upgrade path, and if users ask for help, we can often work out special deals for them.
-
- 		System or network security violations are forbidden and may result in criminal and civil penalties. The following are some examples, but they are not exhaustive: Access, use, probe, or scan of a system's security or authentication mechanisms, data, or traffic without authorization. Mail bombing, flooding, purposeful attempts to overload a system and broadcast attacks are all examples of interfering with service to any user, host, or network. In an email or a newsgroup posting, forging any TCP-IP packet header or any part of the header information. <br>
- 		<h2>Server Abuse</h2>
- 		Any attempt to damage or harm a OneNetly Web server or a OneNetly Web subscriber is strictly prohibited, including but not limited to:
- 		<ul>
- 			<li style="font-weight: 400;" aria-level="1">Logging into a server or account that you don't have permission to use</li>
- 			<li style="font-weight: 400;" aria-level="1">Obtaining services not intended for you or your use by accessing data or taking any action.</li>
- 			<li style="font-weight: 400;" aria-level="1">Attempting to probe, scan, or test any system, subsystem, or network for vulnerabilities.</li>
- 			<li style="font-weight: 400;" aria-level="1">Without sufficient authorization, tampering, hacking, changing, or otherwise damaging or compromising security or authentication measures</li>
- 			<li style="font-weight: 400;" aria-level="1">Transmission of material containing viruses, Trojan horses, worms, time bombs, cancelbots, or other computer programming routines or engines with the aim or effect of damaging, destroying, disrupting, or otherwise degrading the functionality or operation of a computer or the System.</li>
- 			<li style="font-weight: 400;" aria-level="1">Interfering with, intercepting, or taking control of any system, data, or information</li>
- 			<li style="font-weight: 400;" aria-level="1">Interfering with any user's, host's, or network's service, including, but not limited to, overloading, "flooding," "mailbombing," or "crashing" any computer system</li>
- 		</ul>
- 		*You shall be held liable for all acts taken on your account, whether they were carried out by you or others.
-
- 		*The above policies must be followed by all OneNetly sub-networks and dedicated servers. <br>
- 		<h2>Bandwidth And Traffic Measurement Policy, and Overage Policy:</h2>
- 		Incoming and outgoing traffic allowances are included in all monthly traffic listings for Startup, Enterprise, Corporate, VPS, Dedicated Servers, and any other hosting plans. Incoming and outgoing traffic allowances are based on a 50/50 split of incoming to outgoing traffic based on the total assigned traffic, therefore they are each half of the total listed traffic. Any traffic usage above the incoming or outgoing traffic totals will be charged at the rate specified in your plan while you were paying per MB/GB overage.
-
- 		The OneNetly Hoist traffic usage policy is straightforward! Each month, you are given a certain amount of traffic to use as you see fit. If the quantity of data transfer exceeds the user's plan subscription for shared hosting plans, the account will be suspended, however, the user may receive warnings through email, and you may be contacted by OneNetly/OneNetly staff for overuse and provided positive options.
-
- 		OneNetly will not provide any minimum bandwidth guarantee (either international/IX) for any shared bandwidth port (which is mostly offered with VPS/Dedicated Server/FTP server plans), but users can have any amount of dedicated bandwidth port, and upstream service provider will provide 75 percent bandwidth guarantee up to upstream service provider's Singapore/UK server. The dedicated bandwidth port is available as an add-on; for a price, please contact OneNetly's sales team. <br>
- 		<h2>Scheduled Maintenance and Downtime</h2>
- 		OneNetly Web server will provide services 24 hours a day, seven days a week, using commercially reasonable efforts. Subscriber acknowledges that the services may be unavailable or inoperable from time to time for a variety of reasons, including scheduled maintenance or upgrades (“Scheduled Downtime”), service malfunctions, and causes beyond OneNetly Web's control or that are not reasonably foreseeable by OneNetly, such as telecommunications or digital transmission outages. Scheduled Downtimes shall be communicated to subscribers at least 48 hours in advance, and OneNetly Web will use commercially reasonable steps to minimize any additional disruption, inaccessibility, and/or inoperability of its web servers. OneNetly Web is not liable for any downtime caused by a user's actions. In addition, shared accounts are not covered by the 99.99 percent network uptime guarantee. <br>
- 		<h2>Responsibility(Reseller/Client)</h2>
- 		Unless the account has been demonstrated to be a victim of outside hacking or address forging, the client is accountable for all activity that originates from the account. It is the client's responsibility to keep their username and password secure. The customer is responsible for any third-party content that may appear on their website (such as the usage of Free For All links pages). The OneNetly service necessitates a basic understanding of Internet languages, protocols, and software. This level of understanding varies based on the client's intended use and desired content for the web area. The following are some examples: Web publishing necessitates an understanding of HTML, proper document location and linking, FTPing Web contents, graphics, text, sound, image mapping, and so on. Knowledge of the FrontPage tools, as well as Telnet and FTP comprehension and capabilities, are required for FrontPage web publication. CGI-Scripts: familiarity of the UNIX environment, TAR and GUNZIP commands, Perl, CShell scripts, permissions, and so forth is required. Mail: a use of mail clients to receive and send mail, etc. The client acknowledges that he or she possesses the essential skills to design and maintain their website. The client acknowledges that OneNetly is not obligated to provide this knowledge or support in matters not related to OneNetly servers. <br>
- 		<h2>Backups</h2>
- 		OneNetly goes to great lengths to keep the system running smoothly. OneNetly, on the other hand, will not be held liable for data loss due to any reason. OneNetly suggests that ALL information/data be backed up on their users' computers as needed to maintain the highest level of data security. Any data that is extremely important to you should be stored in multiple locations at all times.
-
- 		Only OneNetly shared web hosting service users have an automated complimentary (no data consistency or guarantee is included) remote data backup option available at no extra charge (any account with more than 50 GB of data is not covered under the complementary remote data backup features), which is primarily designed for restoring data from the last best backup if the shared web hosting server fails.
-
- 		<b>Note:</b> By default, no data backup option is available for VPS/VDS/Dedicated server users. On OneNetly's end, no backup of the VPS/VDS/Dedicated server customer's data is kept for disaster recovery purposes. As a result, the customer always must devise a backup plan.
-
- 		Backup solutions, on the other hand, can be provided/provisioned through a third-party vendor, with additional fees based on the third-party vendor's terms/solutions. <br>
- 		<h2>Actions</h2>
- 		Account deactivation is the result of a customer's failure to fulfill or follow any of the above policies/terms. OneNetly will be the sole judge of what constitutes an AUP violation. OneNetly maintains the right to suspend or terminate any account at any time.
-
- 		OneNetly will launch an investigation if it becomes aware of an alleged infringement of its AUP. OneNetly may block a customer's access during the inquiry to avoid further potentially unlawful activities. OneNetly may, in its sole discretion, restrict, suspend, or terminate a customer's web hosting account, as well as pursue other civil remedies, depending on the severity of the violation. OneNetly will report any such violation to the proper law enforcement authorities if it is a criminal offense.
-
- 		OneNetly does not provide refunds for a downtime caused by service disablement as a result of AUP violations.
-
- 		Customers of OneNetly agree to indemnify and hold OneNetly harmless from any claims arising from their or any other party's usage of our services. OneNetly is given "as is," "as available," with no explicit or implied warranties of any kind, including, but not limited to, warranties of merchantability, fitness for a specific purpose, or non-infringement. OneNetly makes no promise or warranty that the OneNetly service will be error-free, secure, or available at all times. No oral or written advice or information provided by OneNetly, its employees, licensors, or anyone will create a guarantee, and you should not rely on such information or advice. OneNetly, its partners, and suppliers are not responsible for any costs or damages incurred as a result of any transaction or use of the service, whether directly or indirectly. <br>
- 		<h2>Modification</h2>
- 		OneNetly maintains the right, without notice, to add, delete, or modify any provision of this policy. <br>
- 		<h2>Refusal of Service</h2>
- 		At our sole discretion, we have the right to refuse, cancel, or stop service. If an account continues to violate our policies after warnings, this is an example of refusal of service. When it comes to spam or script abuse, refusal, cancellation, or suspension of services are extremely common. A customer who becomes unreasonable, unprofessional, exceedingly difficult to work with, or threatening is another example of a consumer refusing service. The account of the customer will be suspended, and we will advise the consumer to find a new host. A copy of the account(s) will be sent as a backup.
-
- 		combinations that can cause issues, as well as other unique situations. If a server becomes unstable and an account is discovered to be the source of the problem, we reserve the right to suspend the account to keep the server online and running normally. If the user's usage is on the rise, we recommend investing in a <br>
- 		<h2>General</h2>
- 		Service is subject to interpretation and change at the discretion of OneNetly administrators without notice. All charges are nonrefundable and non-negotiable, except for the 30-day money return guarantee. Any breach of these Terms of Service will result in the account being terminated. OneNetly reserves the right to terminate accounts at any time without notice. With 15 days' notice, we have the right to delete any account.
-
- 	</article>
- </div>
-
- <!-- End Tos -->
+      <p class="mt-8">By using OneNetly, you agree to abide by these terms and conditions. If you have any questions or concerns, please contact us at support@onenetly.com.</p>
+      
+  </div>
 
  <!-- Footer -->
  
