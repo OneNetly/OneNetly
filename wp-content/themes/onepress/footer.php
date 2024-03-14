@@ -6,7 +6,7 @@
 </div>
 
 <?php do_action( 'tailpress_content_after' ); ?>
-
+<?php if(function_exists('newwpsafelink_bottom')) newwpsafelink_bottom();?>
 <!-- Main Footer Start -->
 <div class="bg-gray-900">
   <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
