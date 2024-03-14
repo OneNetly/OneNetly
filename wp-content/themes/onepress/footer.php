@@ -110,8 +110,6 @@
 </div>
 
 </div>
-
-<?php wp_footer(); ?>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-54W25R1NPQ"></script>
 <script>
@@ -121,5 +119,7 @@
 
   gtag('config', 'G-54W25R1NPQ');
 </script>
+<?php wp_footer(); ?>
+
 </body>
 </html>
