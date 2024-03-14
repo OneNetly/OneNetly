@@ -70,7 +70,7 @@
       </nav>
     </div>
   </div>
-
+<br>
   <?php if(function_exists('newwpsafelink_top')) newwpsafelink_top();?>
 
 	<div id="content" class="site-content flex-grow">
