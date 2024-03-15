@@ -79,8 +79,17 @@
             },
             methods: {
                 onFileChange(e) {
-                    this.file = e.target.files[0];
+                    const selectedFile = e.target.files[0];
+                    const maxSize = 50 * 1024 * 1024; // 50 MB in bytes
+                    if (selectedFile.size > maxSize) {
+                        // Reset file input and notify the user
+                        this.$refs.fileInput.value = '';
+                        alert('File size exceeds the limit of 50 MB.');
+                    } else {
+                        this.file = selectedFile;
+                    }
                 },
+
                 uploadFile() {
                     let formData = new FormData();
                     formData.append('file', this.file);
