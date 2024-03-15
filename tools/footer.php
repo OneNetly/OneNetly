@@ -109,6 +109,6 @@
 
   gtag('config', 'G-54W25R1NPQ');
 </script>
-<script src="./js/upload.js"></script>
+
 </body>
 </html>
