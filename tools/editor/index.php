@@ -26,7 +26,7 @@
     <meta name="twitter:description" content="Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!">
     <meta name="twitter:image" content="https://onenetly.com/img/favicon.png">
 
-    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+    <link rel="shortcut icon" type="image/jpg" href="https://onenetly.com/img/favicon.png" />
 	<script src="https://cdn.tailwindcss.com"></script> 
 	<script src="//unpkg.com/alpinejs" defer></script>
 
