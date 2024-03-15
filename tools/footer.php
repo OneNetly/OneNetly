@@ -109,7 +109,6 @@
 
   gtag('config', 'G-54W25R1NPQ');
 </script>
-<?php wp_footer(); ?>
 
 </body>
 </html>
