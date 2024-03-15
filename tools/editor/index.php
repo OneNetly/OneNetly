@@ -1,4 +1,4 @@
-<?php include './header.php';?>
+<?php include '../header.php';?>
 <div id="editor-container"></div>
 <script src="dist/pixie.umd.js"></script>
 <script>
@@ -64,4 +64,4 @@
   });
   window.pixie = pixie;
 </script>
-<?php include './footer.php';?>
+<?php include '../footer.php';?>
