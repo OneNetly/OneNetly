@@ -6,7 +6,7 @@
         <form action="index.php" method="post" enctype="multipart/form-data" class="space-y-4">
             <div class="flex flex-col">
                 <label for="file" class="mb-2">Choose a file to upload:</label>
-                <input type="file" name="file" id="file" accept="image/*,.ico" class="border p-2 rounded-md" />
+                <input type="file" name="file" id="file" class="border p-2 rounded-md" />
             </div>
             <button type="submit" class="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 transition duration-300">Upload</button>
         </form>
@@ -18,25 +18,10 @@
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $file = $_FILES['file'];
 
-        // Check if file size is within limit (50 MB)
-        if ($file['size'] > 52428800) { // 50 MB in bytes
-            echo "File size exceeds the limit of 50 MB.";
-            exit;
-        }
-
-        // Check if the uploaded file is an image or icon
-        $allowed_extensions = array('jpg', 'jpeg', 'png', 'gif', 'ico');
-        $file_extension = pathinfo($file['name'], PATHINFO_EXTENSION);
-        if (!in_array(strtolower($file_extension), $allowed_extensions)) {
-            echo "Only images (jpg, jpeg, png, gif) and icons (ico) are allowed.";
-            exit;
-        }
-
-        // Continue with file upload if validations pass
         if ($file['error'] === UPLOAD_ERR_OK) {
             // Use nft.storage API to upload the file to IPFS
             $nftStorageEndpoint = 'https://api.nft.storage/upload';
-            $apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDc2RDY5NjZmMjBmYjVEOTkwNDc5MTU2OWE4OWIzNzBGQzNDN0RBYkYiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5MjYzMjM1Mjg4MSwibmFtZSI6Ik9uZU5ldGx5In0.0PreBDH8Kv-69JsNSz6ugCKCAsJ9-682RwIU46tk30A'; // Replace with your API key
+            $apiKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDc2RDY5NjZmMjBmYjVEOTkwNDc5MTU2OWE4OWIzNzBGQzNDN0RBYkYiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY5MjYzMjM1Mjg4MSwibmFtZSI6Ik9uZU5ldGx5In0.0PreBDH8Kv-69JsNSz6ugCKCAsJ9-682RwIU46tk30A';
 
             $curl = curl_init($nftStorageEndpoint);
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
@@ -99,5 +84,4 @@
             copyButton.style.cursor = "default";
         }
     </script>
-    <br>
     <?php include './footer.php'; ?>
