@@ -29,6 +29,7 @@
     <link rel="shortcut icon" type="image/jpg" href="https://onenetly.com/img/favicon.png" />
 	<script src="https://cdn.tailwindcss.com"></script> 
 	<script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-54W25R1NPQ"></script>
