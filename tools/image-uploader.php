@@ -64,6 +64,7 @@
                 </button>
             </div>
         </div>
+        </div>
         
     <div class="bg-gray-900">
   <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
