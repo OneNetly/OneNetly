@@ -5,7 +5,7 @@
 	<script src="https://cdn.tailwindcss.com"></script> 
 	<script src="//unpkg.com/alpinejs" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-  <script src="./js/upload.js"></script>
+  
 </head>
 
 <body>
