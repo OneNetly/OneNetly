@@ -1,4 +1,4 @@
-<?php include 'header.php';?>
+<?php include './header.php';?>
     <style>
         .progress-container {
     position: relative;
@@ -123,6 +123,7 @@
             }
         });
     </script>
+    <?php include './footer.php';?>
 </body>
 
 </html>
