@@ -1,4 +1,4 @@
-<?php include './header.php';?>
+<?php include 'header.php';?>
     <style>
         .progress-container {
     position: relative;
@@ -65,7 +65,7 @@
             </div>
         </div>
         
-<?php include './footer.php';?>
+        
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
@@ -123,4 +123,6 @@
             }
         });
     </script>
+</body>
 
+</html>
