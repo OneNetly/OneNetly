@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta name="viewport" content="width=device-width">
-	<script src="https://cdn.tailwindcss.com"></script> 
-	<script src="//unpkg.com/alpinejs" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-  
-</head>
+
 
 <body>
-    
-<div class="sticky top-0 z-50 w-full border-b border-transparent bg-white text-gray-700 shadow max-lg:max-h-screen max-lg:overflow-y-auto">
+  <div class="sticky top-0 z-50 w-full border-b border-transparent bg-white text-gray-700 shadow max-lg:max-h-screen max-lg:overflow-y-auto">
     <div x-data="{ open: false }"
       class="mx-auto flex max-w-screen-xl flex-col px-2 py-2 lg:flex-row lg:items-center lg:justify-between">
       <div class="flex flex-row items-center justify-between p-4">

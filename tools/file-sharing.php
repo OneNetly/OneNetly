@@ -1,3 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>File Sharing - Free Web Hosting Simplified</title>
+    <meta name="metaTitle" content="File Sharing - Free Web Hosting Simplified">
+    <meta name="description" content="Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://onenetly.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="OneNetly Free File Sharing">
+    <meta property="og:description" content="Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!">
+    <meta property="og:image" content="https://onenetly.com/img/og.png">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="OneNetly Free File Sharing">
+    <meta name="twitter:description" content="Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!">
+    <meta name="twitter:image" content="https://onenetly.com/img/favicon.png">
+
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
+	<script src="https://cdn.tailwindcss.com"></script> 
+	<script src="//unpkg.com/alpinejs" defer></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-54W25R1NPQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-54W25R1NPQ');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+</head>
+
 <?php include './header.php';?>
     <style>
         .progress-container {
