@@ -71,7 +71,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff; /* Change color as needed */
+    color: #000; /* Change color as needed */
     font-weight: bold;
 }
 
