@@ -90,7 +90,7 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script></center></br>
+</script></center><br><br>
     <div id="app" class="max-w-3xl mx-auto p-6 bg-white mt-8 rounded-lg shadow-lg">
         <h1 class="text-2xl font-semibold mb-4">File Upload</h1>
 
@@ -123,7 +123,7 @@
         </div>
         
     <br>
-    <center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
+    <center><br><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
      crossorigin="anonymous"></script>
 <!-- Square -->
 <ins class="adsbygoogle"
@@ -134,7 +134,7 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
+</script><br></center>
     <?php include './footer.php';?>
 <script>
         new Vue({

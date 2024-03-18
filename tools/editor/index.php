@@ -52,7 +52,7 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
+</script><br></center>
 <div id="editor-container"></div>
 <script src="dist/pixie.umd.js"></script>
 <script>
@@ -129,5 +129,5 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
+</script><br></center>
 <?php include '../footer.php';?>
