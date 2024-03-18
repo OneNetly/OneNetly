@@ -90,7 +90,7 @@
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
+</script></center></br>
     <div id="app" class="max-w-3xl mx-auto p-6 bg-white mt-8 rounded-lg shadow-lg">
         <h1 class="text-2xl font-semibold mb-4">File Upload</h1>
 
