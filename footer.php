@@ -1,3 +1,5 @@
+<div id="foremediaads-footer"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/footer"></script>
 <div id="foremediaads-footer_float"></div>
 <script type="text/javascript" async src="https://platform.foremedia.net/code/40980/footer_float"></script>
 <div class="bg-gray-900">
