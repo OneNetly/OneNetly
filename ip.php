@@ -20,7 +20,7 @@ if (isset($data[$userIP])) {
     // Check if the user's IP is flagged as a proxy
     if ($data[$userIP]['proxy'] == 'yes') {
         // Check if the user's IP is also considered bad based on its score
-        if ($data[$userIP]['score'] >= 50) {
+        if ($data[$userIP]['score'] >= 2) {
             echo "You are using a VPN or Proxy and your IP is flagged as bad.";
         } else {
             echo "You are using a VPN or Proxy but your IP is not flagged as bad.";
