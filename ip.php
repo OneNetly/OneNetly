@@ -4,10 +4,10 @@
 $apiKey = "160336-8915o3-794i5c-2y8800";
 
 // IP address to check
-$ip = $_SERVER['REMOTE_ADDR'];
+$ip = "37.60.48.2";
 
-// Construct the API URL
-$url = "https://proxycheck.io/v2/$ip?key=$apiKey";
+// Construct the API URL with all features
+$url = "https://proxycheck.io/v2/$ip?key=$apiKey&vpn=1&asn=1&risk=1&port=1&seen=1&days=7&tag=msg";
 
 // Make a request to proxycheck.io API
 $response = file_get_contents($url);
@@ -23,6 +23,12 @@ if ($data[$ip]['proxy'] == 'yes') {
     } else {
         echo "You are using a VPN or Proxy but your IP is not flagged as bad.";
     }
+    // Print additional details
+    echo "\nASN: " . $data[$ip]['asn'];
+    echo "\nRisk: " . $data[$ip]['risk'];
+    echo "\nPort: " . $data[$ip]['port'];
+    echo "\nLast Seen: " . $data[$ip]['last_seen'];
+    echo "\nCustom Tag: " . $data[$ip]['msg']; // Assuming 'msg' is the custom tag name
 } else {
     echo "You are not using a VPN or Proxy.";
 }
