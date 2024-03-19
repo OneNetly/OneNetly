@@ -346,21 +346,8 @@
     </div>
   </div>
 
-
-  <div class="space-y-16 container xl:max-w-7xl mx-auto pt-4 lg:py-6">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Let's get started</h2>
-      <p class="text-lg text-gray-700 text-center mb-12">Choose the hosting provider who makes it easy and fast to create websites. Completely risk free with our 30-day money back guarantee.</p>
-      <div class="flex justify-center space-x-4">
-        <a href="https://ap.onenetly.com/index.php?rp=/store/free-hosting" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
-          Get Started Now
-        </a>
-        <a href="https://ap.onenetly.com/contact.php" class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-          Contact Us
-        </a>
-      </div>
-    </div>
-  </div>
+<div id="foremediaads-c1"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/c1"></script>
 
 <!-- Main Footer -->
 
