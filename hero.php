@@ -21,6 +21,5 @@
             </div>
         </div>
     </div>
-</div>
-<div id="foremediaads-c2"></div>
-<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/c2"></script>
+    <div id="foremediaads-c1"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/c1"></script>

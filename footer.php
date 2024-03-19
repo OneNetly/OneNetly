@@ -1,7 +1,6 @@
-<div id="foremediaads-footer"></div>
-<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/footer"></script>
-<div id="foremediaads-footer_float"></div>
-<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/footer_float"></script>
+<div id="foremediaads-c1"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/c1"></script>
+
 <div class="bg-gray-900">
   <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <div class="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
@@ -93,6 +92,7 @@
     <div class="border-t border-gray-800 py-8 text-center text-sm text-gray-400">Copyright © 2024 OneNetly, LLC. All Rights Reserved.</div>
   </footer>
 </div>
-
+<div id="foremediaads-footer_float"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/footer_float"></script>
 </body>
 </html>
