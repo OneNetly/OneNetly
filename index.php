@@ -282,8 +282,8 @@
 </div>
 <!-- END FEATURES -->
 
-<div id="foremediaads-e1"></div>
-<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/e1"></script>
+<div id="foremediaads-c1"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/c1"></script>
 
 <div class="container mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
