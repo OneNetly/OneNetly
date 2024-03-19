@@ -15,21 +15,27 @@ $response = file_get_contents($url);
 // Decode the JSON response
 $data = json_decode($response, true);
 
-// Check if the user's IP is flagged as a proxy
-if ($data[$userIP]['proxy'] == 'yes') {
-    // Check if the user's IP is also considered bad based on its score
-    if ($data[$userIP]['score'] >= 11) {
-        echo "You are using a VPN or Proxy and your IP is flagged as bad.";
+// Check if the user's IP is present in the response
+if (isset($data[$userIP])) {
+    // Check if the user's IP is flagged as a proxy
+    if ($data[$userIP]['proxy'] == 'yes') {
+        // Check if the user's IP is also considered bad based on its score
+        if ($data[$userIP]['score'] >= 50) {
+            echo "You are using a VPN or Proxy and your IP is flagged as bad.";
+        } else {
+            echo "You are using a VPN or Proxy but your IP is not flagged as bad.";
+        }
+        // Print additional details
+        echo "\nASN: " . $data[$userIP]['asn'];
+        echo "\nRisk: " . $data[$userIP]['risk'];
+        echo "\nPort: " . $data[$userIP]['port'];
+        echo "\nLast Seen: " . $data[$userIP]['last_seen'];
+        echo "\nCustom Tag: " . $data[$userIP]['msg']; // Assuming 'msg' is the custom tag name
     } else {
-        echo "You are using a VPN or Proxy but your IP is not flagged as bad.";
+        echo "You are not using a VPN or Proxy.";
     }
-    // Print additional details
-    echo "\nASN: " . $data[$userIP]['asn'];
-    echo "\nRisk: " . $data[$userIP]['risk'];
-    echo "\nPort: " . $data[$userIP]['port'];
-    echo "\nLast Seen: " . $data[$userIP]['last_seen'];
-    echo "\nCustom Tag: " . $data[$userIP]['msg']; // Assuming 'msg' is the custom tag name
 } else {
-    echo "You are not using a VPN or Proxy.";
+    // Handle the case when the user's IP is not found in the response
+    echo "Unable to retrieve information for your IP address.";
 }
 ?>
