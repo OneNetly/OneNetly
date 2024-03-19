@@ -18,7 +18,7 @@ $data = json_decode($response, true);
 // Check if the IP is flagged as a proxy
 if ($data[$ip]['proxy'] == 'yes') {
     // Check if the IP is also considered bad based on its score
-    if ($data[$ip]['score'] >= 66) {
+    if ($data[$ip]['score'] >= 50) {
         echo "You are using a VPN or Proxy and your IP is flagged as bad.";
     } else {
         echo "You are using a VPN or Proxy but your IP is not flagged as bad.";
