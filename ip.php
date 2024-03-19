@@ -9,7 +9,7 @@ $ip = $_SERVER['REMOTE_ADDR'];
 $userAgent = $_SERVER['HTTP_USER_AGENT'];
 
 // Construct the API URL
-$url = "https://proxycheck.io/v2/$ip?key=$apiKey&&vpn=1";
+$url = "https://proxycheck.io/v2/$ip?key=$apiKey&vpn=1";
 
 // Initialize cURL session
 $curl = curl_init();
@@ -26,7 +26,6 @@ curl_setopt_array($curl, array(
     CURLOPT_SSL_VERIFYPEER => true, // Verify the SSL certificate
 ));
 
-// Execute cURL request
 $response = curl_exec($curl);
 
 // Check for errors
@@ -37,6 +36,9 @@ if ($response === false) {
     // Decode the JSON response
     $data = json_decode($response, true);
 
+    // Debugging: Output the decoded JSON response
+    var_dump($data);
+
     // Check if the IP is flagged as a proxy
     if ($data[$ip]['proxy'] == 'yes') {
         echo "IP Address: $ip - You are using a VPN or Proxy.";
@@ -44,7 +46,3 @@ if ($response === false) {
         echo "IP Address: $ip - You are not using a VPN or Proxy.";
     }
 }
-
-// Close cURL session
-curl_close($curl);
-?>
