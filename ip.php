@@ -1,7 +1,7 @@
 <?php
 
 // Your proxycheck.io API key
-$apiKey = "YOUR_API_KEY";
+$apiKey = "160336-8915o3-794i5c-2y8800";
 
 // IP address to check
 $ip = $_SERVER['REMOTE_ADDR'];
