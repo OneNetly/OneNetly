@@ -87,19 +87,6 @@
     </div>
 </div>
 
-<center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
-     crossorigin="anonymous"></script>
-<!-- Square -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9354746037074515"
-     data-ad-slot="1383400984"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
-
 <!-- START FEATURES-->
 <div class="space-y-4 max-w-7xl mx-auto py-16 lg:py-0 lg:pt-16 px-6 lg:pb-20 lg:dark:pb-16">
 
@@ -355,19 +342,6 @@
 
     </div>
   </div>
-
-  <center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
-     crossorigin="anonymous"></script>
-<!-- Square -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9354746037074515"
-     data-ad-slot="1383400984"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></center>
 
 <!-- Main Footer -->
 
