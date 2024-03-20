@@ -1,15 +1,3 @@
-<center><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515"
-     crossorigin="anonymous"></script>
-<!-- Square -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-9354746037074515"
-     data-ad-slot="1383400984"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></center><br>
 <div class="bg-gray-900">
   <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <div class="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
