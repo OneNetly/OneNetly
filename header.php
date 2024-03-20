@@ -79,3 +79,5 @@
       
     </div>
   </div>
+  <div id="foremediaads-interstitial_ad"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/interstitial_ad"></script>
