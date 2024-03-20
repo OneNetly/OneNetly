@@ -31,7 +31,7 @@
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-54W25R1NPQ"></script>
     <script>
@@ -80,13 +80,5 @@
     </div>
   </div>
 
-  <center><br><script type="text/javascript">
-	atOptions = {
-		'key' : '5c5b84f70ab47f3008ca2d0fdf9fb7d6',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/5c5b84f70ab47f3008ca2d0fdf9fb7d6/invoke.js"></scr' + 'ipt>');
-</script><br></center>
+  <center><br><div id="foremediaads-c1"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/c1"></script><br></center>

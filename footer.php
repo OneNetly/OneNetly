@@ -1,13 +1,5 @@
-<center><br><script type="text/javascript">
-	atOptions = {
-		'key' : '5c5b84f70ab47f3008ca2d0fdf9fb7d6',
-		'format' : 'iframe',
-		'height' : 60,
-		'width' : 468,
-		'params' : {}
-	};
-	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/5c5b84f70ab47f3008ca2d0fdf9fb7d6/invoke.js"></scr' + 'ipt>');
-</script><br></center>
+<center><br><div id="foremediaads-c1"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/c1"></script><br></center>
 <div class="bg-gray-900">
   <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <div class="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
