@@ -31,9 +31,7 @@
     <link rel="shortcut icon" type="image/jpg" href="img/favicon.png" />
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515" crossorigin="anonymous"></script>
-
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-54W25R1NPQ"></script>
     <script>
