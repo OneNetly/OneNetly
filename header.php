@@ -80,8 +80,6 @@
     </div>
   </div>
 
-  <script type='text/javascript' src='//pl17264611.profitablegatecpm.com/d2/70/61/d27061a80f5b3832b97510f507c12507.js'></script>
-
   <center><br><script type="text/javascript">
 	atOptions = {
 		'key' : '5c5b84f70ab47f3008ca2d0fdf9fb7d6',
