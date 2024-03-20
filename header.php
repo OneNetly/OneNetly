@@ -79,5 +79,12 @@
       
     </div>
   </div>
-  <div id="foremediaads-interstitial_ad"></div>
+
+<div id="foremediaads-read_nextin_page_push"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/read_nextin_page_push"></script>
+
+<div id="foremediaads-interstitial_ad"></div>
 <script type="text/javascript" async src="https://platform.foremedia.net/code/40980/interstitial_ad"></script>
+
+<div id="foremediaads-footer_float"></div>
+<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/footer_float"></script>
