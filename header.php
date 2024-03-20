@@ -80,11 +80,15 @@
     </div>
   </div>
 
-<div id="foremediaads-read_nextin_page_push"></div>
-<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/read_nextin_page_push"></script>
+  <script type='text/javascript' src='//pl17264611.profitablegatecpm.com/d2/70/61/d27061a80f5b3832b97510f507c12507.js'></script>
 
-<div id="foremediaads-interstitial_ad"></div>
-<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/interstitial_ad"></script>
-
-<div id="foremediaads-footer_float"></div>
-<script type="text/javascript" async src="https://platform.foremedia.net/code/40980/footer_float"></script>
+  <center><script type="text/javascript">
+	atOptions = {
+		'key' : '5c5b84f70ab47f3008ca2d0fdf9fb7d6',
+		'format' : 'iframe',
+		'height' : 60,
+		'width' : 468,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/5c5b84f70ab47f3008ca2d0fdf9fb7d6/invoke.js"></scr' + 'ipt>');
+</script></center>

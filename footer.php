@@ -1,3 +1,15 @@
+<script type='text/javascript' src='//pl17264611.profitablegatecpm.com/d2/70/61/d27061a80f5b3832b97510f507c12507.js'></script>
+
+<center><script type="text/javascript">
+atOptions = {
+  'key' : '5c5b84f70ab47f3008ca2d0fdf9fb7d6',
+  'format' : 'iframe',
+  'height' : 60,
+  'width' : 468,
+  'params' : {}
+};
+document.write('<scr' + 'ipt type="text/javascript" src="//www.topcreativeformat.com/5c5b84f70ab47f3008ca2d0fdf9fb7d6/invoke.js"></scr' + 'ipt>');
+</script></center>
 <div class="bg-gray-900">
   <footer class="mx-auto max-w-screen-2xl px-4 md:px-8">
     <div class="mb-16 grid grid-cols-2 gap-12 pt-10 md:grid-cols-4 lg:grid-cols-6 lg:gap-8 lg:pt-12">
