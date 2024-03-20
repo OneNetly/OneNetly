@@ -1,1 +1,0 @@
-{include file="$template/core/layouts/footer/default/default.tpl"}
