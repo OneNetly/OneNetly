@@ -8,6 +8,9 @@
 	<script src="//unpkg.com/alpinejs" defer></script>
     <script type="text/javascript" src="https://fstatic.netpub.media/extra/cmp/cmp-gdpr.js" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <!-- Netpub Banner - Interstitial 0x0 -->
+    <script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
+    <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="1050x300,120x600,160x600,200x200,250x250,300x250,300x50,300x600,320x100,320x50,336x280,400x350,468x60,640x480,678x60,700x300,728x500,728x90,750x400,750x480,870x200,970x250,970x90" data-sizes-mobile="1050x300,120x600,160x600,200x200,250x250,300x250,300x50,300x600,320x100,320x50,336x280,400x350,468x60,640x480,678x60,700x300,728x500,728x90,750x400,750x480,870x200,970x250,970x90" data-interstitial="1"></ins>
 	<?php wp_head(); ?>
 </head>
 
@@ -53,7 +56,7 @@
       </nav>
     </div>
   </div>
-  
+
   <?php if(function_exists('newwpsafelink_top')) newwpsafelink_top();?>
 
 	<div id="content" class="site-content flex-grow">
