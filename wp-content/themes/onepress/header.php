@@ -4,10 +4,11 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<script src="https://cdn.tailwindcss.com"></script> 
+	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+    <meta name="twitter:description" content="Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!">
+    <meta name="twitter:image" content="https://ap.onenetly.com/img/favicon.png">
 	<?php wp_head(); ?>
 </head>
 
@@ -429,5 +430,5 @@
 
     </div>
   </div>
-
-		<?php } ?>
+  
+  <?php } ?>
