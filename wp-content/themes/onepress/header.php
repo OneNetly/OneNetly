@@ -6,6 +6,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
+    <script type="text/javascript" src="https://fstatic.netpub.media/extra/cmp/cmp-gdpr.js" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php wp_head(); ?>
 </head>
