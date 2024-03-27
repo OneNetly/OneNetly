@@ -7,8 +7,6 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <meta name="twitter:description" content="Free web hosting to launch your dream website! free domain, & reliable hosting. Start building for free today!">
-    <meta name="twitter:image" content="https://ap.onenetly.com/img/favicon.png">
 	<?php wp_head(); ?>
 </head>
 
@@ -213,9 +211,9 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left  "> Lightning Speed
+                    <h4 class="text-lg font-bold mb-2 text-left"> Lightning Speed
                     </h4>
-                    <p class="leading-relaxed text-gray-600   "> Any website's speed is crucial. We use the 9x faster LiteSpeed server than Apache for our web hosting. </p>
+                    <p class="leading-relaxed text-gray-600"> Any website's speed is crucial. We use the 9x faster LiteSpeed server than Apache for our web hosting. </p>
                 </div>
 
                 <div class="group p-8 transition ease-out duration-200 bg-white   shadow-lg rounded-2xl border-gray-200">
@@ -274,10 +272,10 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left  "> Solid Security
+                    <h4 class="text-lg font-bold mb-2 text-left"> Solid Security
 
                     </h4>
-                    <p class="leading-relaxed text-gray-600   ">
+                    <p class="leading-relaxed text-gray-600">
                         With enterprise-grade security, Solid Security, Firewall technologies, you can safeguard your brand and audience.
                     </p>
                 </div>
@@ -312,11 +310,11 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left  ">
+                    <h4 class="text-lg font-bold mb-2 text-left">
                         Full Flexibility
 
                     </h4>
-                    <p class="leading-relaxed text-gray-600   ">
+                    <p class="leading-relaxed text-gray-600">
                         With monthly contract terms, you have complete flexibility. You can change your bundle at
                         any moment to fit your needs.
                     </p>
@@ -333,10 +331,10 @@
                             </svg>
                         </div>
                     </div>
-                    <h4 class="text-lg font-bold mb-2 text-left  ">
+                    <h4 class="text-lg font-bold mb-2 text-left">
                         Transparency
                     </h4>
-                    <p class="leading-relaxed text-gray-600   ">
+                    <p class="leading-relaxed text-gray-600">
                         Before you place an order, you will receive complete information about the goods, package,
                         and price.
 
