@@ -2,6 +2,7 @@
 
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto">
+  <h2 class="text-3xl font-bold mb-8">Latest Articles</h2>
     <div class="flex flex-wrap -m-4">
       <!-- Latest Post - start -->
       <?php
