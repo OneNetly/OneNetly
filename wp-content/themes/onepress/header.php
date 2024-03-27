@@ -34,7 +34,7 @@
       <!-- For Phone -->
       <nav :class="{'flex': open, 'hidden': !open}" class="ml-0 hidden flex-auto flex-col px-5 pt-5 lg:ml-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
 
-        <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent" href="./index.php">Home</a>
+        <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent" href="/">Home</a>
         <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent" href="https://ap.onenetly.com/index.php?rp=/store/free-hosting">Free Web Hosting</a>
         <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent" href="https://ap.onenetly.com/cart.php?a=add&domain=register">Domains</a>
         <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent" href="https://forum.onenetly.com">Forum</a>
