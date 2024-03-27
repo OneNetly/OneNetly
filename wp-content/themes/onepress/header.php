@@ -38,21 +38,8 @@
         <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent" href="https://ap.onenetly.com/index.php?rp=/store/free-hosting">Free Web Hosting</a>
         <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent" href="https://ap.onenetly.com/cart.php?a=add&domain=register">Domains</a>
         <a class="text-md focus:shadow-outline mt-2 flex w-full flex-row items-center rounded-lg bg-gray-100 p-3 text-left font-semibold hover:text-gray-900 focus:text-gray-900 focus:outline-none lg:mt-0 lg:w-auto lg:bg-transparent" href="https://forum.onenetly.com">Forum</a>
-
-                <!-- Addons -->
-                <div @click.away="open = false"
-          class="relative mt-2 rounded-lg bg-gray-100 p-3 lg:my-0 lg:mt-0 lg:rounded-none lg:bg-transparent lg:p-0 dark:bg-slate-800 lg:dark:bg-transparent"
-          x-data="{ open: false }">
-          <button @click="open = !open" class="text-md focus:shadow-outline flex w-full flex-row items-center justify-between rounded-lg bg-gray-100 text-left font-semibold hover:text-gray-900 focus:outline-none lg:mb-0 lg:inline-block lg:w-auto lg:bg-transparent lg:px-4 lg:py-3 dark:bg-gray-800 dark:hover:text-white dark:focus:text-white lg:dark:bg-transparent lg:dark:hover:bg-transparent lg:dark:focus:bg-transparent">
-            <span>Tools</span>
-            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="ml-1 mt-1 inline h-4 w-4 rotate-0 transform transition-transform duration-200 md:-mt-1">
-              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-          
-        </div>
-        <!-- END Addons -->
-      </nav>
+      
+    </nav>
       <!-- For desktop -->
       <nav :class="{'flex': open, 'hidden': !open}" class="mt-6 hidden flex-auto items-center justify-between px-5 pb-10 sm:flex-row sm:items-center lg:mt-0 lg:flex lg:flex-row lg:justify-end lg:px-0 lg:pb-0 lg:pt-0">
         <div class="md:p-4">
@@ -95,7 +82,7 @@
 
             <!-- Right Side -->
             <div class="flex justify-end md:flex-1">
-                <img src="https://onenetly.com/img/hero.svg" alt="Hero OneNetly" class="mt-14 md:mt-0 ml-5">
+                <img src="https://onenetly.com/img/hero.svg" alt="Hero" class="mt-14 md:mt-0 ml-5">
             </div>
         </div>
 
@@ -436,7 +423,7 @@
           <svg x-show="openQuestion === 5" class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
         </div>
         <div x-show="openQuestion === 5" class="mt-4">
-            <p>You can use as many free subdomains, like yourname.mynetly.com, if you want.</p>
+            <p>No, We don't support subdomain.</p>
           </div>
       </div>
 
