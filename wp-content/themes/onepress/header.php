@@ -14,7 +14,7 @@
 <body>
 
 <!-- Orquidea - Push -->
-<script src='//tags.orquideassp.com/tag/49373'></script>
+<center><script src='//tags.orquideassp.com/tag/49373'></script></center>
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
@@ -93,7 +93,7 @@
 </div>
 
 <!-- Orquidea - 300 x 250 -->
-<script src='//tags.orquideassp.com/tag/49374'></script>
+<center><script src='//tags.orquideassp.com/tag/49374'></script></center>
 
 <!-- component -->
 <div class="bg-white">
