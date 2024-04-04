@@ -122,6 +122,7 @@
   gtag('config', 'G-54W25R1NPQ');
 </script>
 <?php wp_footer(); ?>
-
+<!-- Orquidea - Footer -->
+<script src='//tags.orquideassp.com/tag/49372'></script>
 </body>
 </html>

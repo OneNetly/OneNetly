@@ -13,9 +13,8 @@
 
 <body>
 
-<!-- Netpub Banner - Interstitial 0x0 -->
-<script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="1050x300,120x600,160x600,200x200,250x250,300x250,300x50,300x600,320x100,320x50,336x280,400x350,468x60,640x480,678x60,700x300,728x500,728x90,750x400,750x480,870x200,970x250,970x90" data-sizes-mobile="1050x300,120x600,160x600,200x200,250x250,300x250,300x50,300x600,320x100,320x50,336x280,400x350,468x60,640x480,678x60,700x300,728x500,728x90,750x400,750x480,870x200,970x250,970x90" data-interstitial="1"></ins>
+<!-- Orquidea - Push -->
+<script src='//tags.orquideassp.com/tag/49373'></script>
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
@@ -93,9 +92,8 @@
     </div>
 </div>
 
-<!-- Netpub Banner - IAB 728x90 -->
-<script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="300x50,320x100,320x50,468x60,678x60" data-sizes-mobile="200x200,250x250,300x250,300x50,320x100,320x50,360x100,360x50,678x60" data-slot="1"></ins>
+<!-- Orquidea - 300 x 250 -->
+<script src='//tags.orquideassp.com/tag/49374'></script>
 
 <!-- component -->
 <div class="bg-white">
@@ -376,9 +374,8 @@
 </div>
 <!-- END FEATURES -->
 
-<!-- Netpub Banner - IAB 728x90 -->
-<script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="300x50,320x100,320x50,468x60,678x60" data-sizes-mobile="200x200,250x250,300x250,300x50,320x100,320x50,360x100,360x50,678x60" data-slot="1"></ins>
+<!-- Orquidea - 336 x 280 -->
+<script src='//tags.orquideassp.com/tag/49375'></script>
 
 <div class="container mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
