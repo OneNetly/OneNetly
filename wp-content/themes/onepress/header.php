@@ -8,13 +8,11 @@
 	<script src="//unpkg.com/alpinejs" defer></script>
     <script type="text/javascript" src="https://fstatic.netpub.media/extra/cmp/cmp-gdpr.js" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515" crossorigin="anonymous"></script>
 	<?php wp_head(); ?>
 </head>
 
 <body>
-
-<!-- Orquidea - Push -->
-<center><script src='//tags.orquideassp.com/tag/49373'></script></center>
 
 <?php do_action( 'tailpress_site_before' ); ?>
 
@@ -91,9 +89,6 @@
 
     </div>
 </div>
-
-<!-- Orquidea - 300 x 250 -->
-<center><script src='//tags.orquideassp.com/tag/49374'></script></center>
 
 <!-- component -->
 <div class="bg-white">
@@ -373,9 +368,6 @@
     <!-- END Features Section: Modern Alternate With Icons -->
 </div>
 <!-- END FEATURES -->
-
-<!-- Orquidea - 336 x 280 -->
-<script src='//tags.orquideassp.com/tag/49375'></script>
 
 <div class="container mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
