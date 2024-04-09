@@ -145,8 +145,8 @@
             </div>
 
             <!-- Netpub Banner - IAB 640x480 -->
-            <script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-            <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="200x200,250x250,300x250,300x50,320x100,320x50,336x280,400x350,468x60" data-sizes-mobile="200x200,250x250,300x250,300x50,320x100,320x50,336x280" data-slot="4"></ins>
+            <br><script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
+            <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="200x200,250x250,300x250,300x50,320x100,320x50,336x280,400x350,468x60" data-sizes-mobile="200x200,250x250,300x250,300x50,320x100,320x50,336x280" data-slot="4"></ins><br>
             
             <div class="relative group md:w-6/12 lg:w-7/12">
                 <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-lg transition duration-500 group-hover:scale-105"></div>
