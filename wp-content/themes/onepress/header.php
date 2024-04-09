@@ -6,9 +6,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
-    <script type="text/javascript" src="https://fstatic.netpub.media/extra/cmp/cmp-gdpr.js" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <script type="text/javascript" src="https://fstatic.netpub.media/extra/cmp/cmp-gdpr.js" defer></script>
     <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <script>
   window.googletag = window.googletag || {cmd: []};
@@ -22,11 +20,8 @@
 </head>
 
 <body>
-    <!-- Netpub Banner - Interstitial 0x0 -->
-    <script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-    <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="1050x300,120x600,160x600,200x200,250x250,300x250,300x50,300x600,320x100,320x50,336x280,400x350,468x60,640x480,678x60,700x300,728x500,728x90,750x400,750x480,870x200,970x250,970x90" data-sizes-mobile="1050x300,120x600,160x600,200x200,250x250,300x250,300x50,300x600,320x100,320x50,336x280,400x350,468x60,640x480,678x60,700x300,728x500,728x90,750x400,750x480,870x200,970x250,970x90" data-interstitial="1"></ins>
-
-    <?php do_action( 'tailpress_site_before' ); ?>
+    
+<?php do_action( 'tailpress_site_before' ); ?>
 
 <div id="page" class="min-h-screen flex flex-col">
 
@@ -193,6 +188,12 @@
     </div>
 </div>
 
+<!-- /22936075043/OneNetlyAD -->
+<center><div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1712683790331-0'); });
+  </script>
+</div></center>
 
 <!-- START FEATURES-->
 <div class="space-y-4 max-w-7xl mx-auto py-16 lg:py-0 lg:pt-16 px-6 lg:pb-20 lg:dark:pb-16">
@@ -386,10 +387,12 @@
 </div>
 <!-- END FEATURES -->
 
-<!-- Netpub Banner - IAB 728x500 -->
-<script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="200x200,250x250,300x250,300x50,320x100,320x50,336x280,400x350,468x60,678x60,700x300,728x90" data-sizes-mobile="200x200,250x250,300x250,336x280,360x100,360x300,360x50" data-slot="5"></ins>
-
+<!-- /22936075043/OneNetlyAD -->
+<center><div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1712683790331-0'); });
+  </script>
+</div></center>
 <div class="container mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
     <div x-data="{ openQuestion: null }" class="max-w-3xl mx-auto">
@@ -450,8 +453,12 @@
 
     </div>
   </div>
-  
-  <!-- Netpub Banner - IAB 750x480 -->
-<script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="200x200,250x250,300x250,300x50,320x100,320x50,336x280,400x350,468x60,678x60,700x300,728x90" data-sizes-mobile="200x200,250x250,300x250,300x50,320x100,320x50,336x280" data-slot="6"></ins>
-  <?php } ?>
+
+<!-- /22936075043/OneNetlyAD -->
+<center><div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1712683790331-0'); });
+  </script>
+</div></center>
+
+<?php } ?>
