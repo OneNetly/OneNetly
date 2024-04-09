@@ -102,11 +102,11 @@
     </div>
 </div>
 <!-- /22936075043/OneNetlyAD -->
-<div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
+<center><div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
   <script>
     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1712683790331-0'); });
   </script>
-</div>
+</div></center>
 <!-- component -->
 <div class="bg-white">
     <div class="container m-auto px-6 py-20 md:px-12 lg:px-20">
