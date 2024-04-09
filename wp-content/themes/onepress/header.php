@@ -144,10 +144,10 @@
                 </div>
             </div>
 
-            <!-- Netpub Banner - IAB 640x480 -->
-            <div><script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-            <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="200x200,250x250,300x250,300x50,320x100,320x50,336x280,400x350,468x60" data-sizes-mobile="200x200,250x250,300x250,300x50,320x100,320x50,336x280" data-slot="4"></ins>
-        </div>
+            <!-- Netpub Banner - IAB 678x60 -->
+            <script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
+            <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="300x50,320x50,468x60" data-sizes-mobile="300x50,320x50,360x50,468x60" data-slot="2"></ins>
+
             <div class="relative group md:w-6/12 lg:w-7/12">
                 <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-lg transition duration-500 group-hover:scale-105"></div>
                 <div class="relative p-6 pt-16 md:p-8 md:pl-12 md:rounded-r-2xl lg:pl-20 lg:p-16">
@@ -378,9 +378,9 @@
 </div>
 <!-- END FEATURES -->
 
-<!-- Netpub Banner - IAB 678x60 -->
+<!-- Netpub Banner - IAB 728x500 -->
 <script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
-<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="300x50,320x50,468x60" data-sizes-mobile="300x50,320x50,360x50,468x60" data-slot="2"></ins>
+<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="200x200,250x250,300x250,300x50,320x100,320x50,336x280,400x350,468x60,678x60,700x300,728x90" data-sizes-mobile="200x200,250x250,300x250,336x280,360x100,360x300,360x50" data-slot="5"></ins>
 
 <div class="container mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
