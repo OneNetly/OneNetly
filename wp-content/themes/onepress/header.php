@@ -7,15 +7,6 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-<script>
-  window.googletag = window.googletag || {cmd: []};
-  googletag.cmd.push(function() {
-    googletag.defineSlot('/22936075043/OneNetlyAD', [[1024, 768], [960, 90], [300, 75], [980, 120], [480, 320], [468, 60], [970, 250], [970, 66], [930, 180], [300, 50], [950, 90], [980, 90], [728, 90], [320, 50], [250, 250], [336, 280], [220, 90], [300, 250], [970, 90], [300, 100], 'fluid'], 'div-gpt-ad-1712683790331-0').addService(googletag.pubads());
-    googletag.pubads().enableSingleRequest();
-    googletag.enableServices();
-  });
-</script>
 	<?php wp_head(); ?>
 </head>
 
@@ -96,12 +87,7 @@
 
     </div>
 </div>
-<!-- /22936075043/OneNetlyAD -->
-<center><div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1712683790331-0'); });
-  </script>
-</div></center>
+
 <!-- component -->
 <div class="bg-white">
     <div class="container m-auto px-6 py-20 md:px-12 lg:px-20">
@@ -187,13 +173,6 @@
         </div>
     </div>
 </div>
-
-<!-- /22936075043/OneNetlyAD -->
-<center><div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1712683790331-0'); });
-  </script>
-</div></center>
 
 <!-- START FEATURES-->
 <div class="space-y-4 max-w-7xl mx-auto py-16 lg:py-0 lg:pt-16 px-6 lg:pb-20 lg:dark:pb-16">
@@ -387,12 +366,6 @@
 </div>
 <!-- END FEATURES -->
 
-<!-- /22936075043/OneNetlyAD -->
-<center><div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1712683790331-0'); });
-  </script>
-</div></center>
 <div class="container mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h1>
     <div x-data="{ openQuestion: null }" class="max-w-3xl mx-auto">
@@ -453,12 +426,5 @@
 
     </div>
   </div>
-
-<!-- /22936075043/OneNetlyAD -->
-<center><div id='div-gpt-ad-1712683790331-0' style='min-width: 220px; min-height: 50px;'>
-  <script>
-    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1712683790331-0'); });
-  </script>
-</div></center>
 
 <?php } ?>
