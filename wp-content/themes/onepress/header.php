@@ -8,11 +8,16 @@
 	<script src="//unpkg.com/alpinejs" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://fstatic.netpub.media/extra/cmp/cmp-gdpr.js" defer></script>
 	<?php wp_head(); ?>
 </head>
 
 <body>
-    
+
+<!-- Netpub Banner - Interstitial 0x0 -->
+<script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
+<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="1050x300,120x600,160x600,200x200,250x250,300x250,300x50,300x600,320x100,320x50,336x280,400x350,468x60,640x480,678x60,700x300,728x500,728x90,750x400,750x480,870x200,970x250,970x90" data-sizes-mobile="1050x300,120x600,160x600,200x200,250x250,300x250,300x50,300x600,320x100,320x50,336x280,400x350,468x60,640x480,678x60,700x300,728x500,728x90,750x400,750x480,870x200,970x250,970x90" data-interstitial="1"></ins>
+
 <?php do_action( 'tailpress_site_before' ); ?>
 
 <div id="page" class="min-h-screen flex flex-col">
@@ -138,6 +143,10 @@
                 </div>
             </div>
 
+            <!-- Netpub Banner - IAB 728x90 -->
+            <script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
+            <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="300x50,320x100,320x50,468x60,678x60" data-sizes-mobile="200x200,250x250,300x250,300x50,320x100,320x50,360x100,360x50,678x60" data-slot="1"></ins>
+            
             <div class="relative group md:w-6/12 lg:w-7/12">
                 <div aria-hidden="true" class="absolute top-0 w-full h-full rounded-2xl bg-white shadow-lg transition duration-500 group-hover:scale-105"></div>
                 <div class="relative p-6 pt-16 md:p-8 md:pl-12 md:rounded-r-2xl lg:pl-20 lg:p-16">
@@ -427,5 +436,7 @@
 
     </div>
   </div>
-
+<!-- Netpub Banner - IAB 728x500 -->
+<script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
+<ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="200x200,250x250,300x250,300x50,320x100,320x50,336x280,400x350,468x60,678x60,700x300,728x90" data-sizes-mobile="200x200,250x250,300x250,336x280,360x100,360x300,360x50" data-slot="5"></ins>
 <?php } ?>
