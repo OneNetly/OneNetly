@@ -7,7 +7,7 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515" crossorigin="anonymous"></script> -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://fstatic.netpub.media/extra/cmp/cmp-gdpr.js" defer></script>
 	<?php wp_head(); ?>
 </head>
