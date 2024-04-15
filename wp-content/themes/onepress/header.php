@@ -398,7 +398,7 @@
           <svg x-show="openQuestion === 2" class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
         </div>
         <div x-show="openQuestion === 2" class="mt-4">
-            <p>Forget about waiting lists, OnrNetly accounts are automatically created in minutes.</p>
+            <p>Forget about waiting lists, OneNetly accounts are automatically created in minutes.</p>
           </div>
       </div>
 
