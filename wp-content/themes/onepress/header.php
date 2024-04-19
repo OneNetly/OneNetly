@@ -9,6 +9,9 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9354746037074515" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://fstatic.netpub.media/extra/cmp/cmp-gdpr.js" defer></script>
+    <!-- Yandex.RTB -->
+    <script>window.yaContextCb=window.yaContextCb||[]</script>
+    <script src="https://yandex.ru/ads/system/context.js" async></script>
 	<?php wp_head(); ?>
 </head>
 
@@ -372,7 +375,16 @@
     <!-- END Features Section: Modern Alternate With Icons -->
 </div>
 <!-- END FEATURES -->
-
+<!-- Yandex.RTB R-A-7636095-1 -->
+<div id="yandex_rtb_R-A-7636095-1"></div>
+<script>
+window.yaContextCb.push(()=>{
+	Ya.Context.AdvManager.render({
+		"blockId": "R-A-7636095-1",
+		"renderTo": "yandex_rtb_R-A-7636095-1"
+	})
+})
+</script>
 <!-- Netpub Banner - IAB 728x90 -->
 <script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
 <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="300x50,320x100,320x50,468x60,678x60" data-sizes-mobile="200x200,250x250,300x250,300x50,320x100,320x50,360x100,360x50,678x60" data-slot="1"></ins>
@@ -437,6 +449,16 @@
 
     </div>
   </div>
+  <!-- Yandex.RTB R-A-7636095-1 -->
+<div id="yandex_rtb_R-A-7636095-1"></div>
+<script>
+window.yaContextCb.push(()=>{
+	Ya.Context.AdvManager.render({
+		"blockId": "R-A-7636095-1",
+		"renderTo": "yandex_rtb_R-A-7636095-1"
+	})
+})
+</script>
 <!-- Netpub Banner - IAB 728x500 -->
 <script type="text/javascript">{ let s = document.createElement("script"); s.setAttribute("async", true); s.setAttribute("src", "https://fstatic.netpub.media/static/2732195bd87625475e0868faa6c05381.min.js?"+Date.now()); document.querySelector("head").appendChild(s); }</script>
 <ins class="adv-2732195bd87625475e0868faa6c05381" data-sizes-desktop="200x200,250x250,300x250,300x50,320x100,320x50,336x280,400x350,468x60,678x60,700x300,728x90" data-sizes-mobile="200x200,250x250,300x250,336x280,360x100,360x300,360x50" data-slot="5"></ins>
