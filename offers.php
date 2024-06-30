@@ -1,12 +1,5 @@
 <?php
 
-/**
- * offers
- * 
- * @package Sngine
- * @author Zamblek
- */
-
 // fetch bootloader
 require('bootloader.php');
 
