@@ -1,5 +1,4 @@
 <?php
-
 // fetch bootloader
 require('bootloader.php');
 
